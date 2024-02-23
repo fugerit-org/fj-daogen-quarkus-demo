@@ -1,0 +1,48 @@
+openapi: 3.0.0
+info:
+  title: OpenAPI load specification for DAOGEN_QUICKSTART.MAPPED_TABLE'
+  description: 'Comments : Sample table mapped with different name'
+  version: '1.0.0'
+servers:
+  - url: http://localhost:8080/mappedtable/load
+    description: Local Development server
+paths:
+  /id/{id}:
+    get:
+      summary: Get DAOGEN_QUICKSTART.MAPPED_TABLE by primary key
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Value of field ID
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MappedTable'
+  /all:
+    get:
+      summary: Get all DAOGEN_QUICKSTART.MAPPED_TABLE
+      responses:
+        '200':
+          description: Success response
+          content:
+            application/json:
+              schema:
+                  type: array
+                  items: 
+                    $ref: '#/components/schemas/MappedTable'
+components: 
+  schemas: 
+    MappedTable: 
+      properties:
+        id:
+          type: string
+          example: ''
+        content:
+          type: string
+          example: ''

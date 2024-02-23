@@ -1,0 +1,63 @@
+openapi: 3.0.0
+info:
+  title: OpenAPI load specification for DAOGEN_QUICKSTART.PERSON'
+  description: 'Comments : People data'
+  version: '1.0.0'
+servers:
+  - url: http://localhost:8080/person/load
+    description: Local Development server
+paths:
+  /id/{id}:
+    get:
+      summary: Get DAOGEN_QUICKSTART.PERSON by primary key
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Value of field ID
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Person'
+  /all:
+    get:
+      summary: Get all DAOGEN_QUICKSTART.PERSON
+      responses:
+        '200':
+          description: Success response
+          content:
+            application/json:
+              schema:
+                  type: array
+                  items: 
+                    $ref: '#/components/schemas/Person'
+components: 
+  schemas: 
+    Person: 
+      properties:
+        id:
+          type: string
+          example: ''
+        surname:
+          type: string
+          example: ''
+        name:
+          type: string
+          example: ''
+        birthDate:
+          type: string
+          example: ''
+        note:
+          type: string
+          example: ''
+        idMother:
+          type: string
+          example: ''
+        idFather:
+          type: string
+          example: ''

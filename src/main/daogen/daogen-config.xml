@@ -1,0 +1,95 @@
+<!--
+Daogen configuration
+xsd : https://www.fugerit.org/data/java/doc/xsd/daogen-config-1-0.xsd
+reference : https://marsdocs.fugerit.org/src/docs/config/config.html
+ -->
+<daogen-config 
+	xmlns="http://daogen.fugerit.org"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://daogen.fugerit.org https://www.fugerit.org/data/java/doc/xsd/daogen-config-1-0.xsd" 
+    
+	database-type="h2"
+	gen-version="1.0.0"
+	gen-author="fugerit"
+	src-main-java="src/main/java"
+	src-test-java="src/test/java"
+	src-main-resources="src/main/resources"
+	src-test-resources="src/test/resources"
+	src-helpers="SRC-MAIN-JAVA"
+	src-doc-openapi="src/main/doc/openapi_rest"
+	relations-last="true"
+	class-config="cl://config/daogen_default_class_config.xml"
+	type-mapper="org.fugerit.java.daogen.base.config.DaogenTypeMapper"
+	type-map-config="cl://config/daogen_default_type_mapping.xml"
+	generator-catalog="cl://config/default-generator-catalog.xml"
+	decorator-catalog="cl://config/default-decorator-catalog.xml"
+	default-column-time-insert="DATE_INSERT"
+	default-column-time-update="DATE_UPDATE"
+	package-model="org.fugerit.java.daogen.quickstart.def.model"
+	package-helper="org.fugerit.java.daogen.quickstart.impl.helper"
+	package-struct="org.fugerit.java.daogen.quickstart.impl.struct"
+	package-rse="org.fugerit.java.daogen.quickstart.impl.rse"
+	package-facade-def="org.fugerit.java.daogen.quickstart.def.facade"
+	package-facade-data-impl="org.fugerit.java.daogen.quickstart.impl.facade.data"
+	package-rest-load="org.fugerit.java.fjdaogenquickstart"
+	base-rest-service="org.fugerit.java.daogen.quickstart.config.ServiceProviderHelper"
+	factory-def="org.fugerit.java.daogen.quickstart.def.facade.QuickstartLogicFacade"
+	factory-data-impl="org.fugerit.java.daogen.quickstart.impl.facade.data.QuickstartDataLogicFacade"
+	default-sequence="quickstart_id"
+	openapi_host="http://localhost:8080"
+	openapi_path=""
+	check-empty-interface="1" 
+	jdk-target-version="17"
+	jee-target-mode="jakarta">
+	
+  <relation comment="Relation to mother" 
+  	from="DAOGEN_QUICKSTART.PERSON" 
+  	to="DAOGEN_QUICKSTART.PERSON"
+  	id="DAOGEN_QUICKSTART.PERSON_DAOGEN_QUICKSTART.PERSON" 
+  	key="ID_MOTHER" mode="one" name="mother" />	
+
+  <relation comment="Relation to father" 
+  	from="DAOGEN_QUICKSTART.PERSON" 
+  	to="DAOGEN_QUICKSTART.PERSON"
+  	id="DAOGEN_QUICKSTART.PERSON_DAOGEN_QUICKSTART.PERSON" 
+  	key="ID_FATHER" mode="one" name="father" />
+	
+  <relation comment="Owned documents"
+    from="DAOGEN_QUICKSTART.PERSON" 
+  	to="DAOGEN_QUICKSTART.DOCUMENT" 
+  	id="DAOGEN_QUICKSTART.DOCUMENT_DAOGEN_QUICKSTART.PERSON" 
+  	key="ID_OWNER" mode="many" name="ownDocuments" />	
+	
+  <entity comments="People data" foreignKeys="DAOGEN_QUICKSTART.PERSON,DAOGEN_QUICKSTART.PERSON" id="DAOGEN_QUICKSTART.PERSON" name="PERSON" primaryKey="ID" schema="DAOGEN_QUICKSTART">
+    <field comments="Person id" id="ID" javaType="java.lang.Long" nullable="no" size="0" sqlType="-5" sqlTypeName="BIGINT"/>
+    <field comments="Person surname" id="SURNAME" javaType="java.lang.String" nullable="no" size="256" sqlType="12" sqlTypeName="VARCHAR"/>
+    <field comments="Person name" id="NAME" javaType="java.lang.String" nullable="no" size="256" sqlType="12" sqlTypeName="VARCHAR"/>
+    <field comments="Person birth date" id="BIRTH_DATE" javaType="java.sql.Date" nullable="no" size="0" sqlType="91" sqlTypeName="DATE"/>
+    <field comments="Notes on persone" id="NOTE" javaType="java.lang.String" nullable="no" size="256" sqlType="12" sqlTypeName="VARCHAR"/>
+    <field comments="Reference to mother" id="ID_MOTHER" javaType="java.lang.Long" nullable="yes" size="0" sqlType="-5" sqlTypeName="BIGINT"/>
+    <field comments="Reference to fater" id="ID_FATHER" javaType="java.lang.Long" nullable="yes" size="0" sqlType="-5" sqlTypeName="BIGINT"/>
+  </entity>
+  
+  <entity comments="Documents meta informations" foreignKeys="DAOGEN_QUICKSTART.PERSON,DAOGEN_QUICKSTART.PERSON" id="DAOGEN_QUICKSTART.DOCUMENT" name="DOCUMENT" primaryKey="ID" schema="DAOGEN_QUICKSTART">
+    <field comments="" id="ID" javaType="java.lang.Long" nullable="no" size="0" sqlType="-5" sqlTypeName="BIGINT"/>
+    <field comments="Reference to owner" id="ID_OWNER" javaType="java.lang.Long" nullable="no" size="0" sqlType="-5" sqlTypeName="BIGINT"/>
+    <field comments="Reference to creator" id="ID_CREATOR" javaType="java.lang.Long" nullable="no" size="0" sqlType="-5" sqlTypeName="BIGINT"/>
+    <field comments="Document creation time" id="CREATION_DATE" javaType="java.sql.Timestamp" nullable="no" size="0" sqlType="93" sqlTypeName="TIMESTAMP"/>
+    <field comments="Document update time" id="UPDATE_DATE" javaType="java.sql.Timestamp" nullable="no" size="0" sqlType="93" sqlTypeName="TIMESTAMP"/>
+    <field comments="Documents path" id="PATH" javaType="java.lang.String" nullable="no" size="1024" sqlType="12" sqlTypeName="VARCHAR"/>
+    <field comments="Document state" id="STATE" javaType="java.lang.Long" nullable="no" size="0" sqlType="-5" sqlTypeName="BIGINT"/>
+    <field comments="Documents info" id="INFO" javaType="java.sql.Clob" nullable="no" size="1073741824" sqlType="2005" sqlTypeName="CLOB"/>    
+  </entity>
+  
+  <entity comments="Example table 01 - If possible avoid multiple filed and/or dates in primary key" id="DAOGEN_QUICKSTART.EXAMPLE_01" name="EXAMPLE_01" primaryKey="FIELD1,FIELD2" schema="DAOGEN_QUICKSTART">
+    <field comments="First field of the primary key" id="FIELD1" javaType="java.lang.String" nullable="no" size="32" sqlType="12" sqlTypeName="VARCHAR"/>
+    <field comments="Second field of the primary key" id="FIELD2" javaType="java.sql.Date" nullable="no" size="0" sqlType="91" sqlTypeName="DATE"/>
+    <field comments="Unlinked third field" id="FIELD3" javaType="java.lang.String" nullable="yes" size="256" sqlType="12" sqlTypeName="VARCHAR"/>
+  </entity>  
+	
+  <entity comments="Sample table mapped with different name" id="DAOGEN_QUICKSTART.MAPPED_TABLE" mapToTable="SAMPLE_MAP_TABLE" name="MAPPED_TABLE" primaryKey="ID" schema="DAOGEN_QUICKSTART">
+    <field comments="Record id" id="ID" javaType="java.lang.Long" nullable="no" size="0" sqlType="-5" sqlTypeName="BIGINT"/>
+    <field comments="Record content" id="CONTENT" javaType="java.lang.String" nullable="no" size="16" sqlType="12" sqlTypeName="VARCHAR"/>
+  </entity>
+	
+</daogen-config>

@@ -1,0 +1,57 @@
+openapi: 3.0.0
+info:
+  title: OpenAPI load specification for DAOGEN_QUICKSTART.EXAMPLE_01'
+  description: 'Comments : Example table 01 - If possible avoid multiple filed and/or dates in primary key'
+  version: '1.0.0'
+servers:
+  - url: http://localhost:8080/example01/load
+    description: Local Development server
+paths:
+  /field1/{field1}/field2/{field2}:
+    get:
+      summary: Get DAOGEN_QUICKSTART.EXAMPLE_01 by primary key
+      parameters:
+        - name: field1
+          in: path
+          required: true
+          description: Value of field FIELD1
+          schema:
+            type: string
+        - name: field2
+          in: path
+          required: true
+          description: Value of field FIELD2
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Example01'
+  /all:
+    get:
+      summary: Get all DAOGEN_QUICKSTART.EXAMPLE_01
+      responses:
+        '200':
+          description: Success response
+          content:
+            application/json:
+              schema:
+                  type: array
+                  items: 
+                    $ref: '#/components/schemas/Example01'
+components: 
+  schemas: 
+    Example01: 
+      properties:
+        field1:
+          type: string
+          example: ''
+        field2:
+          type: string
+          example: ''
+        field3:
+          type: string
+          example: ''

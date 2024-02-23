@@ -18,7 +18,7 @@ Start in dev mode
 mvn compile quarkus:dev
 ```
 
-Open [dev ui](http://localhost:8080/q/dev-ui/)
+Open [dev ui](http://localhost:8080/q/dev-ui/) or sample [API Page](http://localhost:8080/)
 
 ## Project creation script
 

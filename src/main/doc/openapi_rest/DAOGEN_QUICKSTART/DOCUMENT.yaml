@@ -1,0 +1,66 @@
+openapi: 3.0.0
+info:
+  title: OpenAPI load specification for DAOGEN_QUICKSTART.DOCUMENT'
+  description: 'Comments : Documents meta informations'
+  version: '1.0.0'
+servers:
+  - url: http://localhost:8080/document/load
+    description: Local Development server
+paths:
+  /id/{id}:
+    get:
+      summary: Get DAOGEN_QUICKSTART.DOCUMENT by primary key
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Value of field ID
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Document'
+  /all:
+    get:
+      summary: Get all DAOGEN_QUICKSTART.DOCUMENT
+      responses:
+        '200':
+          description: Success response
+          content:
+            application/json:
+              schema:
+                  type: array
+                  items: 
+                    $ref: '#/components/schemas/Document'
+components: 
+  schemas: 
+    Document: 
+      properties:
+        id:
+          type: string
+          example: ''
+        idOwner:
+          type: string
+          example: ''
+        idCreator:
+          type: string
+          example: ''
+        creationDate:
+          type: string
+          example: ''
+        updateDate:
+          type: string
+          example: ''
+        path:
+          type: string
+          example: ''
+        state:
+          type: string
+          example: ''
+        info:
+          type: string
+          example: ''
