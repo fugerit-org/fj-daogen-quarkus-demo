@@ -52,6 +52,10 @@
       <artifactId>quarkus-resteasy-reactive</artifactId>
     </dependency>
     <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-smallrye-openapi</artifactId>
+    </dependency>
+    <dependency>
       <groupId>org.fugerit.java</groupId>
       <artifactId>fj-core</artifactId>
       <version>${fj-version}</version>

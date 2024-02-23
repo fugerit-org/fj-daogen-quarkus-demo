@@ -10,7 +10,17 @@
 [![Java build version](https://img.shields.io/badge/build%20on-java%2017+-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)](https://universe.fugerit.org/src/docs/versions/java17.html)
 [![Apache Maven](https://img.shields.io/badge/Apache%20Maven-3.9.0+-C71A36?style=for-the-badge&logo=Apache%20Maven&logoColor=white)](https://universe.fugerit.org/src/docs/versions/maven3_9.html)
 
-## Project creation
+## Quickstart
+
+Start in dev mode 
+
+```shell script
+mvn compile quarkus:dev
+```
+
+Open [dev ui](http://localhost:8080/q/dev-ui/)
+
+## Project creation script
 
 ```shell script
 mvn io.quarkus:quarkus-maven-plugin:3.8.0:create \
