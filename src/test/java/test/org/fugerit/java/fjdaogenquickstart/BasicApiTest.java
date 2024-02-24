@@ -1,4 +1,4 @@
-package org.fugerit.java.demo;
+package test.org.fugerit.java.fjdaogenquickstart;
 
 import io.quarkus.test.junit.QuarkusTest;
 import org.junit.jupiter.api.Test;
