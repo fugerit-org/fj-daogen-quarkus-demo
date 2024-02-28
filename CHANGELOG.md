@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0] - 2024-02-28
+
 ## Added
 
 - sample demo app for fj-daogen version 1.5.1
