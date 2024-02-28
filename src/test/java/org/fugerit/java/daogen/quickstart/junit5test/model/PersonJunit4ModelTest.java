@@ -19,7 +19,7 @@ import org.slf4j.LoggerFactory;
  * // custom code start ( code above here will be overwritten )
  * // custom code end ( code below here will be overwritten )
  */
-public class PersonJunit4ModelTest {
+class PersonJunit4ModelTest {
 
 	// custom code start ( code above here will be overwritten )
 	// custom code end ( code below here will be overwritten )
