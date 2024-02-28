@@ -16,7 +16,7 @@
     <skipITs>true</skipITs>
     <surefire-plugin.version>3.2.5</surefire-plugin.version>
     <fj-version>8.4.9</fj-version>
-    <fj-daogen-version>1.3.4</fj-daogen-version>
+    <fj-daogen-version>1.4.1-SNAPSHOT</fj-daogen-version>
     <build-helper-maven-plugin-version>3.4.0</build-helper-maven-plugin-version>
     <gen.base.dir>${project.basedir}</gen.base.dir>
     <generated.source.daogen>target/generated-sources/daogen</generated.source.daogen>

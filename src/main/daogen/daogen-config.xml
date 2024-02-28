@@ -32,6 +32,7 @@ reference : https://marsdocs.fugerit.org/src/docs/config/config.html
 	package-facade-def="org.fugerit.java.daogen.quickstart.def.facade"
 	package-facade-data-impl="org.fugerit.java.daogen.quickstart.impl.facade.data"
 	package-rest-load="org.fugerit.java.fjdaogenquickstart"
+	package-junit5-model="org.fugerit.java.daogen.quickstart.junit5test.model"
 	base-rest-service="org.fugerit.java.daogen.quickstart.config.ServiceProviderHelper"
 	factory-def="org.fugerit.java.daogen.quickstart.def.facade.QuickstartLogicFacade"
 	factory-data-impl="org.fugerit.java.daogen.quickstart.impl.facade.data.QuickstartDataLogicFacade"
