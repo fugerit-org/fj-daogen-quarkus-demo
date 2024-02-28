@@ -10,3 +10,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Added
 
 - sample demo app for fj-daogen version 1.5.0
+- project based on quarkus 3.8.1
