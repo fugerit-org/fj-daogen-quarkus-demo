@@ -1,0 +1,34 @@
+# fj-daogen-quarkus-demo image build 1.0.0
+#
+# Public built image form amd64/arm64 linux can be found on repository : 
+# https://hub.docker.com/repository/docker/fugeritorg/fj-daogen-quarkus-demo/general
+#
+# create : docker run -it -p 8080:8080 --name fj-daogen-quarkus-demo fugeritorg/fj-daogen-quarkus-demo:latest
+# start : docker start fj-daogen-quarkus-demo
+# stop : docker stop fj-daogen-quarkus-demo
+#
+# Image tag : 
+# docker image tag [image tag] fugeritorg/fj-daogen-quarkus-demo:latest
+#
+# Change with any base openjdk image is preferred 
+FROM amazoncorretto:21.0.2-alpine3.19
+
+LABEL org.opencontainers.image.authors="Fugerit" \
+      org.opencontainers.image.source="Quarkus" \
+      org.opencontainers.image.revision="1.0.0"
+
+COPY --chown=185:0 target/quarkus-app/lib/ /deployments/lib/
+COPY --chown=185:0 target/quarkus-app/*.jar /deployments/
+COPY --chown=185:0 target/quarkus-app/app/ /deployments/app/
+COPY --chown=185:0 target/quarkus-app/quarkus/ /deployments/quarkus/
+RUN mkdir -p src/test/resources/h2init/
+COPY --chown=185:0 src/test/resources/h2init/* /deployments/src/test/resources/h2init/
+
+RUN echo "securerandom.source=file:/dev/./urandom" >> /usr/lib/jvm/default-jvm/jre/lib/security/java.security
+
+CMD java -Dfile.encoding="UTF-8"  -jar /deployments/quarkus-run.jar
+
+WORKDIR /deployments/
+
+ENTRYPOINT ["java","-jar","/deployments/quarkus-run.jar"]
+
