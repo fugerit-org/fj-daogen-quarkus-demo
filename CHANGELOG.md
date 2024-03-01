@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## Added
+
+- quarkus native image build support
+- fj-daogen-version set to 1.6.1 (native reflect config generation)
+
 ### Fixed
 
 - build-helper-maven-plugin-version referenced

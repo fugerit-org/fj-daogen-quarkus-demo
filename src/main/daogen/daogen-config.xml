@@ -36,6 +36,7 @@ reference : https://marsdocs.fugerit.org/src/docs/config/config.html
 	base-rest-service="org.fugerit.java.daogen.quickstart.config.ServiceProviderHelper"
 	factory-def="org.fugerit.java.daogen.quickstart.def.facade.QuickstartLogicFacade"
 	factory-data-impl="org.fugerit.java.daogen.quickstart.impl.facade.data.QuickstartDataLogicFacade"
+	graalvm-reflect-config="daogen-reflect-config.json"
 	default-sequence="quickstart_id"
 	openapi_host="http://localhost:8080"
 	openapi_path=""

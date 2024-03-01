@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory;
 // custom import end ( code below here will be overwritten )
 
 /**
- * Example01Junit4ModelTest, version : 1.0.0
+ * Example01Junit5ModelTest, version : 1.0.0
  *
  * author: fugerit
  *
@@ -19,12 +19,12 @@ import org.slf4j.LoggerFactory;
  * // custom code start ( code above here will be overwritten )
  * // custom code end ( code below here will be overwritten )
  */
-class Example01Junit4ModelTest {
+class Example01Junit5ModelTest {
 
 	// custom code start ( code above here will be overwritten )
 	// custom code end ( code below here will be overwritten )
 
-	private static final Logger logger = LoggerFactory.getLogger( Example01Junit4ModelTest.class );
+	private static final Logger logger = LoggerFactory.getLogger( Example01Junit5ModelTest.class );
 	public void printAll( ModelExample01 current ) { 
 		 logger.info( "FIELD1-> {}", current.getField1() );
 		 logger.info( "FIELD2-> {}", current.getField2() );

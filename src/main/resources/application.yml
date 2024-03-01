@@ -3,7 +3,7 @@
   quarkus:
 
     log:
-      level: TRACE
+      level: INFO
       min-level: TRACE
 
 "%prod":
@@ -12,7 +12,11 @@
 
     log:
       level: INFO
-      min-level: DEBUG
+      min-level: INFO
+
+    # native configuration
+    native:
+      additional-build-args: -H:ReflectionConfigurationFiles=daogen-reflect-config.json
 
 greeting:
   message: "hello"

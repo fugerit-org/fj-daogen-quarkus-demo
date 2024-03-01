@@ -1,0 +1,253 @@
+[ {
+  "name" : "org.fugerit.java.daogen.quickstart.def.model.ModelDocument",
+  "methods" : [ {
+    "name" : "<init>",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getId",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getIdOwner",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getIdCreator",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getCreationDate",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getUpdateDate",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getPath",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getState",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getInfo",
+    "parameterTypes" : [ ]
+  } ]
+}, {
+  "name" : "org.fugerit.java.daogen.quickstart.impl.helper.HelperDocument",
+  "methods" : [ {
+    "name" : "<init>",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getId",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getIdOwner",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getIdCreator",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getCreationDate",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getUpdateDate",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getPath",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getState",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getInfo",
+    "parameterTypes" : [ ]
+  } ]
+}, {
+  "name" : "org.fugerit.java.daogen.quickstart.impl.helper.WrapperDocument",
+  "methods" : [ {
+    "name" : "<init>",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getId",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getIdOwner",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getIdCreator",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getCreationDate",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getUpdateDate",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getPath",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getState",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getInfo",
+    "parameterTypes" : [ ]
+  } ]
+}, {
+  "name" : "org.fugerit.java.daogen.quickstart.def.model.ModelExample01",
+  "methods" : [ {
+    "name" : "<init>",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getField1",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getField2",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getField3",
+    "parameterTypes" : [ ]
+  } ]
+}, {
+  "name" : "org.fugerit.java.daogen.quickstart.impl.helper.HelperExample01",
+  "methods" : [ {
+    "name" : "<init>",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getField1",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getField2",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getField3",
+    "parameterTypes" : [ ]
+  } ]
+}, {
+  "name" : "org.fugerit.java.daogen.quickstart.impl.helper.WrapperExample01",
+  "methods" : [ {
+    "name" : "<init>",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getField1",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getField2",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getField3",
+    "parameterTypes" : [ ]
+  } ]
+}, {
+  "name" : "org.fugerit.java.daogen.quickstart.def.model.ModelMappedTable",
+  "methods" : [ {
+    "name" : "<init>",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getId",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getContent",
+    "parameterTypes" : [ ]
+  } ]
+}, {
+  "name" : "org.fugerit.java.daogen.quickstart.impl.helper.HelperMappedTable",
+  "methods" : [ {
+    "name" : "<init>",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getId",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getContent",
+    "parameterTypes" : [ ]
+  } ]
+}, {
+  "name" : "org.fugerit.java.daogen.quickstart.impl.helper.WrapperMappedTable",
+  "methods" : [ {
+    "name" : "<init>",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getId",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getContent",
+    "parameterTypes" : [ ]
+  } ]
+}, {
+  "name" : "org.fugerit.java.daogen.quickstart.def.model.ModelPerson",
+  "methods" : [ {
+    "name" : "<init>",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getId",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getSurname",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getName",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getBirthDate",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getNote",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getIdMother",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getIdFather",
+    "parameterTypes" : [ ]
+  } ]
+}, {
+  "name" : "org.fugerit.java.daogen.quickstart.impl.helper.HelperPerson",
+  "methods" : [ {
+    "name" : "<init>",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getId",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getSurname",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getName",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getBirthDate",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getNote",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getIdMother",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getIdFather",
+    "parameterTypes" : [ ]
+  } ]
+}, {
+  "name" : "org.fugerit.java.daogen.quickstart.impl.helper.WrapperPerson",
+  "methods" : [ {
+    "name" : "<init>",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getId",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getSurname",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getName",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getBirthDate",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getNote",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getIdMother",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "getIdFather",
+    "parameterTypes" : [ ]
+  } ]
+} ]

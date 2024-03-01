@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory;
 // custom import end ( code below here will be overwritten )
 
 /**
- * PersonJunit4ModelTest, version : 1.0.0
+ * PersonJunit5ModelTest, version : 1.0.0
  *
  * author: fugerit
  *
@@ -19,12 +19,12 @@ import org.slf4j.LoggerFactory;
  * // custom code start ( code above here will be overwritten )
  * // custom code end ( code below here will be overwritten )
  */
-class PersonJunit4ModelTest {
+class PersonJunit5ModelTest {
 
 	// custom code start ( code above here will be overwritten )
 	// custom code end ( code below here will be overwritten )
 
-	private static final Logger logger = LoggerFactory.getLogger( PersonJunit4ModelTest.class );
+	private static final Logger logger = LoggerFactory.getLogger( PersonJunit5ModelTest.class );
 	public void printAll( ModelPerson current ) { 
 		 logger.info( "ID-> {}", current.getId() );
 		 logger.info( "SURNAME-> {}", current.getSurname() );
