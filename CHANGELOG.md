@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- build-helper-maven-plugin-version referenced
+
 ## [1.0.0] - 2024-02-28
 
 ## Added
