@@ -4,57 +4,58 @@ import io.quarkus.runtime.StartupEvent;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.enterprise.event.Observes;
 import jakarta.inject.Inject;
+import lombok.extern.slf4j.Slf4j;
 import org.fugerit.java.core.db.daogen.BasicDaoResult;
 import org.fugerit.java.core.db.daogen.CloseableDAOContextSC;
-import org.fugerit.java.core.db.daogen.DAOContext;
 import org.fugerit.java.daogen.quickstart.def.facade.EntityPersonFacade;
 import org.fugerit.java.daogen.quickstart.def.facade.QuickstartLogicFacade;
 import org.fugerit.java.daogen.quickstart.def.model.ModelPerson;
 import org.fugerit.java.daogen.quickstart.impl.facade.data.QuickstartDataLogicFacade;
-import org.fugerit.java.daogen.quickstart.impl.rse.PersonRSE;
-import org.h2.engine.Mode;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import javax.sql.DataSource;
-import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
-import java.sql.ResultSet;
-import java.sql.Statement;
 
+@Slf4j
 @ApplicationScoped
 public class AppConfig {
 
-    private static final Logger logger = LoggerFactory.getLogger( AppConfig.class );
+    public AppConfig() {
+        this.facade = new QuickstartDataLogicFacade();
+    }
 
-    @Inject
-    DataSource dataSource;
+    @Inject // constructor injection
+    public AppConfig(DataSource dataSource) {
+        this();
+        this.dataSource = dataSource;
+    }
 
-    private QuickstartLogicFacade facade = new QuickstartDataLogicFacade();
+    private DataSource dataSource;
+
+    private QuickstartLogicFacade facade;
 
     void onStart(@Observes StartupEvent ev) {
-        logger.info( "onStart BEGIN" );
-        logger.info( "********************************************************************" );
+        log.info( "onStart BEGIN" );
+        log.info( "********************************************************************" );
         try ( Connection conn = this.dataSource.getConnection();
               CloseableDAOContextSC context = new CloseableDAOContextSC( conn ) ) {
             DatabaseMetaData dbmd = conn.getMetaData();
-            logger.info( "database : {} - {}", dbmd.getDatabaseProductName(), dbmd.getDatabaseProductVersion() );
-            logger.info( "url : {}", dbmd.getURL() );
-            logger.info( ">>>>>>>>>>>>>>>>>>> daogen test 1: " );
+            log.info( "database : {} - {}", dbmd.getDatabaseProductName(), dbmd.getDatabaseProductVersion() );
+            log.info( "url : {}", dbmd.getURL() );
+            log.info( ">>>>>>>>>>>>>>>>>>> daogen test 1: " );
             EntityPersonFacade personFacade = facade.getEntityPersonFacade();
             BasicDaoResult<ModelPerson> result = personFacade.loadAll( context );
-            logger.info( "result : {}", result );
+            log.info( "result : {}", result );
             if (result.isResultOk() ) {
                 for (ModelPerson model : result.getList()) {
-                    logger.info( "model : {}", model );
+                    log.info( "model : {}", model );
                 }
             }
         } catch (Exception e) {
-            logger.info( "onStart ERROR : "+e, e );
+            log.info( "onStart ERROR : "+e, e );
         }
-        logger.info( "********************************************************************" );
-        logger.info( "onStart END" );
+        log.info( "********************************************************************" );
+        log.info( "onStart END" );
     }
 
 }
