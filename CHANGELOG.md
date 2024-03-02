@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - quarkus native image build support
 - fj-daogen-version set to 1.6.2 (native reflect config generation)
+- lombok version 1.18.30
 
 ### Fixed
 
