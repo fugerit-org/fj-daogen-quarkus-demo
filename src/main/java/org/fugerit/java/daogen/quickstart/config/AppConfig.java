@@ -6,22 +6,16 @@ import jakarta.enterprise.event.Observes;
 import jakarta.inject.Inject;
 import org.fugerit.java.core.db.daogen.BasicDaoResult;
 import org.fugerit.java.core.db.daogen.CloseableDAOContextSC;
-import org.fugerit.java.core.db.daogen.DAOContext;
 import org.fugerit.java.daogen.quickstart.def.facade.EntityPersonFacade;
 import org.fugerit.java.daogen.quickstart.def.facade.QuickstartLogicFacade;
 import org.fugerit.java.daogen.quickstart.def.model.ModelPerson;
 import org.fugerit.java.daogen.quickstart.impl.facade.data.QuickstartDataLogicFacade;
-import org.fugerit.java.daogen.quickstart.impl.rse.PersonRSE;
-import org.h2.engine.Mode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.sql.DataSource;
-import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
-import java.sql.ResultSet;
-import java.sql.Statement;
 
 @ApplicationScoped
 public class AppConfig {
