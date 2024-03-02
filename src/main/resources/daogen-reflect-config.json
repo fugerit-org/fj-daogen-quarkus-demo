@@ -27,6 +27,9 @@
   }, {
     "name" : "getInfo",
     "parameterTypes" : [ ]
+  }, {
+    "name" : "isEmpty",
+    "parameterTypes" : [ ]
   } ]
 }, {
   "name" : "org.fugerit.java.daogen.quickstart.impl.helper.HelperDocument",
@@ -56,6 +59,9 @@
     "parameterTypes" : [ ]
   }, {
     "name" : "getInfo",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "isEmpty",
     "parameterTypes" : [ ]
   } ]
 }, {
@@ -87,6 +93,9 @@
   }, {
     "name" : "getInfo",
     "parameterTypes" : [ ]
+  }, {
+    "name" : "isEmpty",
+    "parameterTypes" : [ ]
   } ]
 }, {
   "name" : "org.fugerit.java.daogen.quickstart.def.model.ModelExample01",
@@ -101,6 +110,9 @@
     "parameterTypes" : [ ]
   }, {
     "name" : "getField3",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "isEmpty",
     "parameterTypes" : [ ]
   } ]
 }, {
@@ -117,6 +129,9 @@
   }, {
     "name" : "getField3",
     "parameterTypes" : [ ]
+  }, {
+    "name" : "isEmpty",
+    "parameterTypes" : [ ]
   } ]
 }, {
   "name" : "org.fugerit.java.daogen.quickstart.impl.helper.WrapperExample01",
@@ -132,6 +147,9 @@
   }, {
     "name" : "getField3",
     "parameterTypes" : [ ]
+  }, {
+    "name" : "isEmpty",
+    "parameterTypes" : [ ]
   } ]
 }, {
   "name" : "org.fugerit.java.daogen.quickstart.def.model.ModelMappedTable",
@@ -143,6 +161,9 @@
     "parameterTypes" : [ ]
   }, {
     "name" : "getContent",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "isEmpty",
     "parameterTypes" : [ ]
   } ]
 }, {
@@ -156,6 +177,9 @@
   }, {
     "name" : "getContent",
     "parameterTypes" : [ ]
+  }, {
+    "name" : "isEmpty",
+    "parameterTypes" : [ ]
   } ]
 }, {
   "name" : "org.fugerit.java.daogen.quickstart.impl.helper.WrapperMappedTable",
@@ -167,6 +191,9 @@
     "parameterTypes" : [ ]
   }, {
     "name" : "getContent",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "isEmpty",
     "parameterTypes" : [ ]
   } ]
 }, {
@@ -204,6 +231,9 @@
   }, {
     "name" : "getOwndocuments",
     "parameterTypes" : [ ]
+  }, {
+    "name" : "isEmpty",
+    "parameterTypes" : [ ]
   } ]
 }, {
   "name" : "org.fugerit.java.daogen.quickstart.impl.helper.HelperPerson",
@@ -240,6 +270,9 @@
   }, {
     "name" : "getOwndocuments",
     "parameterTypes" : [ ]
+  }, {
+    "name" : "isEmpty",
+    "parameterTypes" : [ ]
   } ]
 }, {
   "name" : "org.fugerit.java.daogen.quickstart.impl.helper.WrapperPerson",
@@ -275,6 +308,9 @@
     "parameterTypes" : [ ]
   }, {
     "name" : "getOwndocuments",
+    "parameterTypes" : [ ]
+  }, {
+    "name" : "isEmpty",
     "parameterTypes" : [ ]
   } ]
 } ]
