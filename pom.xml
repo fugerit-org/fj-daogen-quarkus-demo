@@ -15,8 +15,8 @@
     <quarkus.platform.version>3.8.1</quarkus.platform.version>
     <skipITs>true</skipITs>
     <surefire-plugin.version>3.2.5</surefire-plugin.version>
-    <fj-version>8.4.10</fj-version>
-    <fj-daogen-version>1.6.1</fj-daogen-version>
+    <fj-version>8.5.0</fj-version>
+    <fj-daogen-version>1.6.2</fj-daogen-version>
     <build-helper-maven-plugin-version>3.4.0</build-helper-maven-plugin-version>
     <gen.base.dir>${project.basedir}</gen.base.dir>
     <generated.source.daogen>target/generated-sources/daogen</generated.source.daogen>

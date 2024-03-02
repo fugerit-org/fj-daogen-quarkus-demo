@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Added
 
 - quarkus native image build support
-- fj-daogen-version set to 1.6.1 (native reflect config generation)
+- fj-daogen-version set to 1.6.2 (native reflect config generation)
 
 ### Fixed
 
