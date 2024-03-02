@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 2024-03-02
+
 ## Added
 
 - info to build / run in README
@@ -17,6 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 - build-helper-maven-plugin-version referenced
+- reflect config to serialize rest response
 
 ## [1.0.0] - 2024-02-28
 
