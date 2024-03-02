@@ -9,7 +9,7 @@
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=fugerit-org_fj-daogen-quarkus-demo&metric=coverage)](https://sonarcloud.io/summary/new_code?id=fugerit-org_fj-daogen-quarkus-demo)
 
 [![Java runtime version](https://img.shields.io/badge/run%20on-java%208+-%23113366.svg?style=for-the-badge&logo=openjdk&logoColor=white)](https://universe.fugerit.org/src/docs/versions/java8.html)
-[![Java build version](https://img.shields.io/badge/build%20on-java%2017+-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)](https://universe.fugerit.org/src/docs/versions/java17.html)
+[![Java build version](https://img.shields.io/badge/build%20on-java%2021+-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)](https://universe.fugerit.org/src/docs/versions/java21.html)
 [![Apache Maven](https://img.shields.io/badge/Apache%20Maven-3.9.0+-C71A36?style=for-the-badge&logo=Apache%20Maven&logoColor=white)](https://universe.fugerit.org/src/docs/versions/maven3_9.html)
 
 ## Quickstart
@@ -21,6 +21,41 @@ mvn compile quarkus:dev
 ```
 
 Open [dev ui](http://localhost:8080/q/dev-ui/) or sample [API Page](http://localhost:8080/)
+
+## Java package version
+
+```shell script
+mvnw pacakge
+```
+
+## Docker container (jvm version)
+
+Build :
+
+```shell script
+docker build -t fj-daogen-quarkus-demo:local .
+```
+
+```shell script
+docker run -p 8080:8080 --name fj-daogen-quarkus-demo-local fj-daogen-quarkus-demo:local
+```
+
+## Native package version
+
+Build : 
+
+First you need to setup [GraalVM](https://www.graalvm.org/) :
+[BUILDING A NATIVE EXECUTABLE](https://quarkus.io/guides/building-native-image)
+
+```shell script
+mvn install -Dnative
+```
+
+Run :
+
+```shell script
+./target/fj-daogen-quarkus-demo-*-runner
+```
 
 ## Project creation script
 
