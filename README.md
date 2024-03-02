@@ -17,7 +17,7 @@
 Start in dev mode 
 
 ```shell script
-mvn compile quarkus:dev
+mvn compile quarkus:dev -Duser.timezone=UTC -Dfile.encoding=UTF-8
 ```
 
 Open [dev ui](http://localhost:8080/q/dev-ui/) or sample [API Page](http://localhost:8080/)
@@ -25,7 +25,7 @@ Open [dev ui](http://localhost:8080/q/dev-ui/) or sample [API Page](http://local
 ## Java package version
 
 ```shell script
-mvnw pacakge
+mvn pacakge
 ```
 
 ## Docker container (jvm version)
@@ -54,7 +54,7 @@ mvn install -Dnative
 Run :
 
 ```shell script
-./target/fj-daogen-quarkus-demo-*-runner
+./target/fj-daogen-quarkus-demo-*-runner -Duser.timezone=UTC -Dfile.encoding=UTF-8
 ```
 
 ## Project creation script
