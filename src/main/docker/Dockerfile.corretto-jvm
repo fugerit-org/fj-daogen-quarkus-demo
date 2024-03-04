@@ -26,9 +26,6 @@ COPY --chown=185:0 src/test/resources/h2init/* /deployments/src/test/resources/h
 
 RUN echo "securerandom.source=file:/dev/./urandom" >> /usr/lib/jvm/default-jvm/jre/lib/security/java.security
 
-CMD java -Dfile.encoding="UTF-8"  -jar /deployments/quarkus-run.jar
-
 WORKDIR /deployments/
 
-ENTRYPOINT ["java","-jar","/deployments/quarkus-run.jar"]
-
+ENTRYPOINT ["java","-jar","/deployments/quarkus-run.jar","-Dfile.encoding=UTF-8","-Duser.timezone=UTC"]
