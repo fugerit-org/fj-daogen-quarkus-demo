@@ -62,6 +62,7 @@ jobs:
         uses: docker/build-push-action@master
         with:
           context: .
+          file: src/main/docker/Dockerfile.corretto-jvm
           platforms: linux/amd64,linux/arm64
           push: true
           tags: fugeritorg/fj-daogen-quarkus-demo:${{ github.ref_name }},fugeritorg/fj-daogen-quarkus-demo:latest
