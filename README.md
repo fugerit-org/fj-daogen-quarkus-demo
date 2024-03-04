@@ -33,11 +33,11 @@ mvn pacakge
 Build :
 
 ```shell script
-docker build -t fj-daogen-quarkus-demo:local .
+docker build --file src/main/docker/Dockerfile.corretto-jvm -t fj-daogen-quarkus-demo:local-jvm .
 ```
 
 ```shell script
-docker run -p 8080:8080 --name fj-daogen-quarkus-demo-local fj-daogen-quarkus-demo:local
+docker run -p 8080:8080 --name fj-daogen-quarkus-demo-local fj-daogen-quarkus-demo:local-jvm
 ```
 
 ## Native package version
@@ -55,6 +55,18 @@ Run :
 
 ```shell script
 ./target/fj-daogen-quarkus-demo-*-runner -Duser.timezone=UTC -Dfile.encoding=UTF-8
+```
+
+## Docker container (native version)
+
+Build :
+
+```shell script
+docker build --file src/main/docker/Dockerfile.native-micro -t fj-daogen-quarkus-demo:local-native .
+```
+
+```shell script
+docker run -p 8080:8080 --name fj-daogen-quarkus-demo-local fj-daogen-quarkus-demo:local-native
 ```
 
 ## Project creation script
