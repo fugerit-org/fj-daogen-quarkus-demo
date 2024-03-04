@@ -9,7 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- build native image workflow
+- build native image workflow for amd64
+- build native image workflow for arm64
 
 ### Fixed
 
