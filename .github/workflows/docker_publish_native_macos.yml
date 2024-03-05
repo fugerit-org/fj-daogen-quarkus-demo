@@ -1,0 +1,52 @@
+# CI with maven build and scan
+
+name: CI docker build native mac
+
+on:
+  # Trigger analysis when pushing in master or pull requests, and when creating
+  # a pull request.
+  push:
+    branches:
+      - graal
+      - macos
+  release:
+    types: [published]
+
+jobs:
+  docker:
+    runs-on: macos-latest
+    steps:
+
+      - uses: actions/checkout@main
+        with:
+          # Shallow clones should be disabled for a better relevancy of analysis
+          fetch-depth: 0
+
+      - name: Echo ref name trigger
+        run: echo ${{ github.ref_name }}
+
+      - uses: graalvm/setup-graalvm@main
+        with:
+          java-version: '21'
+          distribution: 'graalvm'
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          native-image-job-reports: 'true'
+
+      - name: Cache Maven packages
+        uses: actions/cache@main
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2
+
+      - name: Build and analyze
+        run: mvn install -Dnative -Dquarkus.native.container-build=true
+
+      - name: Build and analyze
+        run: cp target/*-runner application
+
+      - name: Upload binary
+        uses: actions/upload-artifact@main
+        with:
+          name: application
+          path: application
