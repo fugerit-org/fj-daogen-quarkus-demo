@@ -108,6 +108,16 @@ public class WrapperPerson extends BasicWrapper<ModelPerson> implements ModelPer
 		return this.unwrapModel().getIdFather();
 	}
 
+	@Override
+	public void setVirtualNote( java.lang.String value ) {
+		this.unwrapModel().setVirtualNote( value );
+	}
+
+	@Override
+	public java.lang.String getVirtualNote() {
+		return this.unwrapModel().getVirtualNote();
+	}
+
 	/*
 	 * fields generated for relations 
 	 */
@@ -133,13 +143,13 @@ public class WrapperPerson extends BasicWrapper<ModelPerson> implements ModelPer
 	}
 
 	@Override
-	public void setOwndocuments( java.util.List<ModelDocument> value ) {
-		this.unwrapModel().setOwndocuments( value );
+	public void setOwnedDocuments( java.util.List<ModelDocument> value ) {
+		this.unwrapModel().setOwnedDocuments( value );
 	}
 
 	@Override
-	public java.util.List<ModelDocument> getOwndocuments() {
-		return this.unwrapModel().getOwndocuments();
+	public java.util.List<ModelDocument> getOwnedDocuments() {
+		return this.unwrapModel().getOwnedDocuments();
 	}
 
 	@Override

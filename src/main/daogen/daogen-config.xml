@@ -60,16 +60,17 @@ reference : https://marsdocs.fugerit.org/src/docs/config/config.html
     from="DAOGEN_QUICKSTART.PERSON" 
   	to="DAOGEN_QUICKSTART.DOCUMENT" 
   	id="DAOGEN_QUICKSTART.DOCUMENT_DAOGEN_QUICKSTART.PERSON" 
-  	key="ID_OWNER" mode="many" name="ownDocuments" />	
+  	key="ID_OWNER" mode="many" name="owned_documents" />
 	
   <entity comments="People data" foreignKeys="DAOGEN_QUICKSTART.PERSON,DAOGEN_QUICKSTART.PERSON" id="DAOGEN_QUICKSTART.PERSON" name="PERSON" primaryKey="ID" schema="DAOGEN_QUICKSTART">
     <field comments="Person id" id="ID" javaType="java.lang.Long" nullable="no" size="0" sqlType="-5" sqlTypeName="BIGINT"/>
     <field comments="Person surname" id="SURNAME" javaType="java.lang.String" nullable="no" size="256" sqlType="12" sqlTypeName="VARCHAR"/>
     <field comments="Person name" id="NAME" javaType="java.lang.String" nullable="no" size="256" sqlType="12" sqlTypeName="VARCHAR"/>
     <field comments="Person birth date" id="BIRTH_DATE" javaType="java.sql.Date" nullable="no" size="0" sqlType="91" sqlTypeName="DATE"/>
-    <field comments="Notes on persone" id="NOTE" javaType="java.lang.String" nullable="no" size="256" sqlType="12" sqlTypeName="VARCHAR"/>
+    <field comments="Notes on people" id="NOTE" javaType="java.lang.String" nullable="no" size="256" sqlType="12" sqlTypeName="VARCHAR"/>
     <field comments="Reference to mother" id="ID_MOTHER" javaType="java.lang.Long" nullable="yes" size="0" sqlType="-5" sqlTypeName="BIGINT"/>
     <field comments="Reference to fater" id="ID_FATHER" javaType="java.lang.Long" nullable="yes" size="0" sqlType="-5" sqlTypeName="BIGINT"/>
+	<field virtual="true" comments="Virtual note" id="VIRTUAL_NOTE" javaType="java.lang.String" nullable="no" size="256" sqlType="12" sqlTypeName="VARCHAR"/>
   </entity>
   
   <entity comments="Documents meta informations" foreignKeys="DAOGEN_QUICKSTART.PERSON,DAOGEN_QUICKSTART.PERSON" id="DAOGEN_QUICKSTART.DOCUMENT" name="DOCUMENT" primaryKey="ID" schema="DAOGEN_QUICKSTART">

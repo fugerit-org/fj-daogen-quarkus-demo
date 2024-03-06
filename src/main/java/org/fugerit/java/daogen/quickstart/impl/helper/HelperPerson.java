@@ -110,6 +110,18 @@ public class HelperPerson extends BasicHelper implements ModelPerson {
 		return this.idFather;
 	}
 
+	private java.lang.String virtualNote;
+
+	@Override
+	public void setVirtualNote( java.lang.String value ) {
+		this.virtualNote = value;
+	}
+
+	@Override
+	public java.lang.String getVirtualNote() {
+		return this.virtualNote;
+	}
+
 	/*
 	 * fields generated for relations 
 	 */
@@ -138,16 +150,16 @@ public class HelperPerson extends BasicHelper implements ModelPerson {
 		return this.father;
 	}
 
-	private java.util.List<ModelDocument> owndocuments;
+	private java.util.List<ModelDocument> ownedDocuments;
 
 	@Override
-	public void setOwndocuments( java.util.List<ModelDocument> value ) {
-		this.owndocuments = value;
+	public void setOwnedDocuments( java.util.List<ModelDocument> value ) {
+		this.ownedDocuments = value;
 	}
 
 	@Override
-	public java.util.List<ModelDocument> getOwndocuments() {
-		return this.owndocuments;
+	public java.util.List<ModelDocument> getOwnedDocuments() {
+		return this.ownedDocuments;
 	}
 
 	@Override
@@ -168,6 +180,8 @@ public class HelperPerson extends BasicHelper implements ModelPerson {
 		buffer.append( this.getIdMother() );
 		buffer.append( ",idFather=" );
 		buffer.append( this.getIdFather() );
+		buffer.append( ",virtualNote=" );
+		buffer.append( this.getVirtualNote() );
 		buffer.append( "]" );
 		return buffer.toString();
 	}

@@ -11,6 +11,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - docker image badge
 
+### Changed
+
+- fj-daogen-version set to 1.7.0
+- virtual field example
+
 ## [1.2.0] - 2024-03-04
 
 ### Added

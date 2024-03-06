@@ -95,7 +95,7 @@ public interface ModelPerson extends org.fugerit.java.core.lang.compare.CheckEmp
 	/**
 	 * Getter method for property : note (nullable: no)
 	 *
-	 * Notes on persone
+	 * Notes on people
 	 *
 	 * @return the value of note
 	 */
@@ -104,7 +104,7 @@ public interface ModelPerson extends org.fugerit.java.core.lang.compare.CheckEmp
 	/**
 	 * Setter method for property : note (nullable: no)
 	 *
-	 * Notes on persone
+	 * Notes on people
 	 *
 	 * @param value the value of note
 	 */
@@ -147,6 +147,24 @@ public interface ModelPerson extends org.fugerit.java.core.lang.compare.CheckEmp
 	void setIdFather( java.math.BigDecimal value );
 
 	/**
+	 * Getter method for property : virtualNote (nullable: no)
+	 *
+	 * Virtual note
+	 *
+	 * @return the value of virtualNote
+	 */
+	java.lang.String getVirtualNote();
+
+	/**
+	 * Setter method for property : virtualNote (nullable: no)
+	 *
+	 * Virtual note
+	 *
+	 * @param value the value of virtualNote
+	 */
+	void setVirtualNote( java.lang.String value );
+
+	/**
 	 * Getter method for property : Mother (nullable: yes)
 	 *
 	 * relation to entity : PERSON
@@ -183,21 +201,21 @@ public interface ModelPerson extends org.fugerit.java.core.lang.compare.CheckEmp
 	void setFather( ModelPerson value );
 
 	/**
-	 * Getter method for property : Owndocuments (nullable: yes)
+	 * Getter method for property : OwnedDocuments (nullable: yes)
 	 *
 	 * relation to entity : DOCUMENT
 	 *
-	 * @return the value of Owndocuments
+	 * @return the value of OwnedDocuments
 	 */
-	java.util.List<ModelDocument> getOwndocuments();
+	java.util.List<ModelDocument> getOwnedDocuments();
 
 	/**
-	 * Setter method for property : Owndocuments (nullable: yes)
+	 * Setter method for property : OwnedDocuments (nullable: yes)
 	 *
 	 * relation to entity : DOCUMENT
 	 *
-	 * @param value the value of Owndocuments
+	 * @param value the value of OwnedDocuments
 	 */
-	void setOwndocuments( java.util.List<ModelDocument> value );
+	void setOwnedDocuments( java.util.List<ModelDocument> value );
 
 }

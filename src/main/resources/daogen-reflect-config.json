@@ -223,13 +223,16 @@
     "name" : "getIdFather",
     "parameterTypes" : [ ]
   }, {
+    "name" : "getVirtualNote",
+    "parameterTypes" : [ ]
+  }, {
     "name" : "getMother",
     "parameterTypes" : [ ]
   }, {
     "name" : "getFather",
     "parameterTypes" : [ ]
   }, {
-    "name" : "getOwndocuments",
+    "name" : "getOwnedDocuments",
     "parameterTypes" : [ ]
   }, {
     "name" : "isEmpty",
@@ -262,13 +265,16 @@
     "name" : "getIdFather",
     "parameterTypes" : [ ]
   }, {
+    "name" : "getVirtualNote",
+    "parameterTypes" : [ ]
+  }, {
     "name" : "getMother",
     "parameterTypes" : [ ]
   }, {
     "name" : "getFather",
     "parameterTypes" : [ ]
   }, {
-    "name" : "getOwndocuments",
+    "name" : "getOwnedDocuments",
     "parameterTypes" : [ ]
   }, {
     "name" : "isEmpty",
@@ -301,13 +307,16 @@
     "name" : "getIdFather",
     "parameterTypes" : [ ]
   }, {
+    "name" : "getVirtualNote",
+    "parameterTypes" : [ ]
+  }, {
     "name" : "getMother",
     "parameterTypes" : [ ]
   }, {
     "name" : "getFather",
     "parameterTypes" : [ ]
   }, {
-    "name" : "getOwndocuments",
+    "name" : "getOwnedDocuments",
     "parameterTypes" : [ ]
   }, {
     "name" : "isEmpty",
