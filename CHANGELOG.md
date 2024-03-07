@@ -14,7 +14,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - quarkus version set to 3.8.2
-- fj-daogen-version set to 1.7.1
+- fj-daogen-version set to 1.7.2
+- fj-version set to 8.5.1
 - virtual field example
 
 ## [1.2.0] - 2024-03-04

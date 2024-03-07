@@ -43,6 +43,7 @@ class Example01Junit5ModelTest {
 	 void testJUnit4ModelExample01() { 
 		ModelExample01 current = this.newInstance();
 		this.printAll( current );
+		org.fugerit.java.core.function.SafeFunction.apply( () -> org.fugerit.java.core.io.ObjectIO.fullSerializationTest( current ) );
 		Assertions.assertNotNull( current );
 	}
 
