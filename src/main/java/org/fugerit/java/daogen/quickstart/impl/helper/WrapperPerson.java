@@ -23,6 +23,18 @@ public class WrapperPerson extends BasicWrapper<ModelPerson> implements ModelPer
 
 	private static final long serialVersionUID = 294847170299L;
 
+	private void writeObject(java.io.ObjectOutputStream out) throws java.io.IOException {
+		// this class is conditionally serializable, depending on contained object
+		// special situation can be handled using this method in future
+		out.defaultWriteObject();
+	}
+
+	private void readObject(java.io.ObjectInputStream in) throws java.io.IOException, ClassNotFoundException {
+		// this class is conditionally serializable, depending on contained object
+		// special situation can be handled using this method in future
+		in.defaultReadObject();
+	}
+
 	public WrapperPerson( ModelPerson wrapped ) {
 		super( wrapped );
 	}

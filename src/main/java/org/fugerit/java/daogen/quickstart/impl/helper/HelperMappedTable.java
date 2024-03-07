@@ -22,6 +22,18 @@ public class HelperMappedTable extends BasicHelper implements ModelMappedTable {
 
 	private static final long serialVersionUID = 472310362289L;
 
+	private void writeObject(java.io.ObjectOutputStream out) throws java.io.IOException {
+		// this class is conditionally serializable, depending on contained object
+		// special situation can be handled using this method in future
+		out.defaultWriteObject();
+	}
+
+	private void readObject(java.io.ObjectInputStream in) throws java.io.IOException, ClassNotFoundException {
+		// this class is conditionally serializable, depending on contained object
+		// special situation can be handled using this method in future
+		in.defaultReadObject();
+	}
+
 	/*
 	 * fields generated for entity attributes 
 	 */

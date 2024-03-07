@@ -2,6 +2,7 @@ package org.fugerit.java.daogen.quickstart.junit5test.model;
 
 import org.fugerit.java.daogen.quickstart.def.model.ModelPerson;
 import org.fugerit.java.daogen.quickstart.impl.helper.HelperPerson;
+import org.fugerit.java.daogen.quickstart.impl.helper.WrapperPerson;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
@@ -36,7 +37,7 @@ class PersonJunit5ModelTest {
 	}
 
 	public ModelPerson newInstance() { 
-		HelperPerson current = new HelperPerson();
+		WrapperPerson current = new WrapperPerson( new HelperPerson() );
 		current.setId(new java.math.BigDecimal( "1" ));
 		current.setSurname("1");
 		current.setName("1");

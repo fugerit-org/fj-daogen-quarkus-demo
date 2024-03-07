@@ -2,6 +2,7 @@ package org.fugerit.java.daogen.quickstart.junit5test.model;
 
 import org.fugerit.java.daogen.quickstart.def.model.ModelExample01;
 import org.fugerit.java.daogen.quickstart.impl.helper.HelperExample01;
+import org.fugerit.java.daogen.quickstart.impl.helper.WrapperExample01;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
@@ -32,7 +33,7 @@ class Example01Junit5ModelTest {
 	}
 
 	public ModelExample01 newInstance() { 
-		HelperExample01 current = new HelperExample01();
+		WrapperExample01 current = new WrapperExample01( new HelperExample01() );
 		current.setField1("1");
 		current.setField2(new java.util.Date());
 		current.setField3("1");

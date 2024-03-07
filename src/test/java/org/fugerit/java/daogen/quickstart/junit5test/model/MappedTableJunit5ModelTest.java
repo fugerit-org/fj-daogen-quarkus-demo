@@ -2,6 +2,7 @@ package org.fugerit.java.daogen.quickstart.junit5test.model;
 
 import org.fugerit.java.daogen.quickstart.def.model.ModelMappedTable;
 import org.fugerit.java.daogen.quickstart.impl.helper.HelperMappedTable;
+import org.fugerit.java.daogen.quickstart.impl.helper.WrapperMappedTable;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
@@ -31,7 +32,7 @@ class MappedTableJunit5ModelTest {
 	}
 
 	public ModelMappedTable newInstance() { 
-		HelperMappedTable current = new HelperMappedTable();
+		WrapperMappedTable current = new WrapperMappedTable( new HelperMappedTable() );
 		current.setId(new java.math.BigDecimal( "1" ));
 		current.setContent("1");
 		return current;

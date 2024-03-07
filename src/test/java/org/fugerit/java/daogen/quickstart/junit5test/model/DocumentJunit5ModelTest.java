@@ -2,6 +2,7 @@ package org.fugerit.java.daogen.quickstart.junit5test.model;
 
 import org.fugerit.java.daogen.quickstart.def.model.ModelDocument;
 import org.fugerit.java.daogen.quickstart.impl.helper.HelperDocument;
+import org.fugerit.java.daogen.quickstart.impl.helper.WrapperDocument;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
@@ -37,7 +38,7 @@ class DocumentJunit5ModelTest {
 	}
 
 	public ModelDocument newInstance() { 
-		HelperDocument current = new HelperDocument();
+		WrapperDocument current = new WrapperDocument( new HelperDocument() );
 		current.setId(new java.math.BigDecimal( "1" ));
 		current.setIdOwner(new java.math.BigDecimal( "1" ));
 		current.setIdCreator(new java.math.BigDecimal( "1" ));
