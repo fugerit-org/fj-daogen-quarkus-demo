@@ -3,7 +3,6 @@ package org.fugerit.java.daogen.quickstart.config;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.core.Response;
 import org.fugerit.java.core.db.dao.DAOException;
-import org.fugerit.java.core.db.daogen.BasicHelper;
 import org.fugerit.java.core.db.daogen.CloseableDAOContext;
 import org.fugerit.java.core.db.daogen.CloseableDAOContextSC;
 import org.fugerit.java.core.db.daogen.SimpleServiceResult;
@@ -21,7 +20,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class ServiceProviderHelper<T> extends BasicHelper {
+public class ServiceProviderHelper<T> {
 
 	/**
 	 * 
