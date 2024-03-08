@@ -3,7 +3,6 @@ package org.fugerit.java.daogen.quickstart.config;
 import io.quarkus.runtime.StartupEvent;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.enterprise.event.Observes;
-import jakarta.inject.Inject;
 import org.fugerit.java.core.db.daogen.BasicDaoResult;
 import org.fugerit.java.core.db.daogen.CloseableDAOContextSC;
 import org.fugerit.java.daogen.quickstart.def.facade.EntityPersonFacade;
@@ -22,10 +21,13 @@ public class AppConfig {
 
     private static final Logger logger = LoggerFactory.getLogger( AppConfig.class );
 
-    @Inject
-    DataSource dataSource;
-
     private QuickstartLogicFacade facade = new QuickstartDataLogicFacade();
+
+    private DataSource dataSource;
+
+    AppConfig( DataSource dataSource ) {
+        this.dataSource = dataSource;
+    }
 
     void onStart(@Observes StartupEvent ev) {
         logger.info( "onStart BEGIN" );
