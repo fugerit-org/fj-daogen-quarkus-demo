@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- fj-daogen-version set to 1.7.4
+- fj-version set to 8.5.3
+- dao-finder-ng-mode 'enabled'
+
 ## [1.3.0] - 2024-03-08
 
 ### Added
