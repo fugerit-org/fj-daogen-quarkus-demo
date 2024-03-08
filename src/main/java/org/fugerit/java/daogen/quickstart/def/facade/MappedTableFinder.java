@@ -1,6 +1,6 @@
 package org.fugerit.java.daogen.quickstart.def.facade;
 
-import org.fugerit.java.core.db.daogen.BaseIdFinder;
+import org.fugerit.java.core.db.daogen.IdFinderNG;
 import org.fugerit.java.daogen.quickstart.def.model.ModelMappedTable;
 
 // custom import start ( code above here will be overwritten )
@@ -15,12 +15,10 @@ import org.fugerit.java.daogen.quickstart.def.model.ModelMappedTable;
  * // custom code start ( code above here will be overwritten )
  * // custom code end ( code below here will be overwritten )
  */
-public class MappedTableFinder extends BaseIdFinder {
+public class MappedTableFinder extends IdFinderNG {
 
 	// custom code start ( code above here will be overwritten )
 	// custom code end ( code below here will be overwritten )
-
-	private static final long serialVersionUID = 704341419948L;
 
 	private ModelMappedTable model;
 

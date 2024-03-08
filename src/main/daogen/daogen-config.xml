@@ -38,6 +38,7 @@ reference : https://marsdocs.fugerit.org/src/docs/config/config.html
 	graalvm-reflect-config="daogen-reflect-config.json"
 	dao-helper-ng-mode="enabled"
 	dao-wrapper-ng-mode="enabled"
+	dao-finder-ng-mode="enabled"
 	default-sequence="quickstart_id"
 	openapi_host="http://localhost:8080"
 	openapi_path=""

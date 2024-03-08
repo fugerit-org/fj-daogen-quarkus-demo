@@ -1,6 +1,6 @@
 package org.fugerit.java.daogen.quickstart.def.facade;
 
-import org.fugerit.java.core.db.daogen.BaseIdFinder;
+import org.fugerit.java.core.db.daogen.IdFinderNG;
 import org.fugerit.java.daogen.quickstart.def.model.ModelExample01;
 
 // custom import start ( code above here will be overwritten )
@@ -15,12 +15,10 @@ import org.fugerit.java.daogen.quickstart.def.model.ModelExample01;
  * // custom code start ( code above here will be overwritten )
  * // custom code end ( code below here will be overwritten )
  */
-public class Example01Finder extends BaseIdFinder {
+public class Example01Finder extends IdFinderNG {
 
 	// custom code start ( code above here will be overwritten )
 	// custom code end ( code below here will be overwritten )
-
-	private static final long serialVersionUID = 660100160067L;
 
 	private ModelExample01 model;
 
