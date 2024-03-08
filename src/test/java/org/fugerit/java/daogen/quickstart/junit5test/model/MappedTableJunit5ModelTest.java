@@ -38,10 +38,9 @@ class MappedTableJunit5ModelTest {
 		return current;
 	}
 	@Test
-	 void testJUnit4ModelMappedTable() { 
+	 void testJUnit5ModelMappedTable() { 
 		ModelMappedTable current = this.newInstance();
 		this.printAll( current );
-		org.fugerit.java.core.function.SafeFunction.apply( () -> org.fugerit.java.core.io.ObjectIO.fullSerializationTest( current ) );
 		Assertions.assertNotNull( current );
 	}
 

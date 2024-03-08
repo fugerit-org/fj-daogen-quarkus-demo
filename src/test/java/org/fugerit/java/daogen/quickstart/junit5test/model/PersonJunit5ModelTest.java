@@ -48,10 +48,9 @@ class PersonJunit5ModelTest {
 		return current;
 	}
 	@Test
-	 void testJUnit4ModelPerson() { 
+	 void testJUnit5ModelPerson() { 
 		ModelPerson current = this.newInstance();
 		this.printAll( current );
-		org.fugerit.java.core.function.SafeFunction.apply( () -> org.fugerit.java.core.io.ObjectIO.fullSerializationTest( current ) );
 		Assertions.assertNotNull( current );
 	}
 

@@ -122,7 +122,7 @@ public class ObjDocument extends WrapperDocument implements SQLData, StructMappe
 	@Override
 	public void writeSQL(SQLOutput stream) throws SQLException {
 		if ( !this.checkLobs() ) {
-			throwUnsupported( "To use writeSQL() you must invoke setupLobs() for  "+this.getSQLTypeName() );
+			org.fugerit.java.core.db.daogen.BasicHelper.throwUnsupported( "To use writeSQL() you must invoke setupLobs() for  "+this.getSQLTypeName() );
 		}
 		this.areLobsSet = false;	// clob and blob will be used only once
 		stream.writeBigDecimal( this.getId() );

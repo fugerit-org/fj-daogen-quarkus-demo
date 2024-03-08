@@ -1,6 +1,6 @@
 package org.fugerit.java.daogen.quickstart.impl.helper;
 
-import org.fugerit.java.core.db.daogen.BasicWrapper;
+import org.fugerit.java.core.db.daogen.BasicWrapperNG;
 import org.fugerit.java.daogen.quickstart.def.model.ModelDocument;
 import org.fugerit.java.daogen.quickstart.def.model.ModelPerson;
 
@@ -16,24 +16,10 @@ import org.fugerit.java.daogen.quickstart.def.model.ModelPerson;
  * // custom code start ( code above here will be overwritten )
  * // custom code end ( code below here will be overwritten )
  */
-public class WrapperPerson extends BasicWrapper<ModelPerson> implements ModelPerson {
+public class WrapperPerson extends BasicWrapperNG<ModelPerson> implements ModelPerson {
 
 	// custom code start ( code above here will be overwritten )
 	// custom code end ( code below here will be overwritten )
-
-	private static final long serialVersionUID = 294847170299L;
-
-	private void writeObject(java.io.ObjectOutputStream out) throws java.io.IOException {
-		// this class is conditionally serializable, depending on contained object
-		// special situation can be handled using this method in future
-		out.defaultWriteObject();
-	}
-
-	private void readObject(java.io.ObjectInputStream in) throws java.io.IOException, ClassNotFoundException {
-		// this class is conditionally serializable, depending on contained object
-		// special situation can be handled using this method in future
-		in.defaultReadObject();
-	}
 
 	public WrapperPerson( ModelPerson wrapped ) {
 		super( wrapped );
