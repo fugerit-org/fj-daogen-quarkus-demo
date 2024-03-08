@@ -27,7 +27,6 @@ reference : https://marsdocs.fugerit.org/src/docs/config/config.html
 	default-column-time-update="DATE_UPDATE"
 	package-model="org.fugerit.java.daogen.quickstart.def.model"
 	package-helper="org.fugerit.java.daogen.quickstart.impl.helper"
-	package-struct="org.fugerit.java.daogen.quickstart.impl.struct"
 	package-rse="org.fugerit.java.daogen.quickstart.impl.rse"
 	package-facade-def="org.fugerit.java.daogen.quickstart.def.facade"
 	package-facade-data-impl="org.fugerit.java.daogen.quickstart.impl.facade.data"
