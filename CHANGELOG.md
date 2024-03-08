@@ -22,6 +22,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - struct generation
 
+### Fixed
+
+- readme now states that GraalVM 21+ is needed to build, java 21+ is needed to run 
+
 ## [1.2.0] - 2024-03-04
 
 ### Added
