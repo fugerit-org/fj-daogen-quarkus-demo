@@ -13,6 +13,8 @@ class PersonJunit5FinderTest {
 		current.setModel( new HelperPerson() );
 		current.setId( 1003L );
 		Assertions.assertNotNull( current );
+		Assertions.assertNotNull( PersonFinder.newInstance( current.getId() ) );
+		Assertions.assertNotNull( PersonFinder.newInstance( current.getModel() ) );
 	}
 
 }

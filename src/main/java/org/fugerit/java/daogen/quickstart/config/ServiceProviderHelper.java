@@ -10,7 +10,6 @@ import org.fugerit.java.core.function.SafeFunction;
 import org.fugerit.java.core.util.result.ResultHelper;
 import org.fugerit.java.daogen.quickstart.def.facade.QuickstartLogicFacade;
 import org.fugerit.java.daogen.quickstart.def.facade.QuickstartLogicFacadeHelper;
-import org.fugerit.java.daogen.quickstart.impl.facade.data.QuickstartDataLogicFacade;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -22,6 +21,8 @@ import java.util.List;
 
 public class ServiceProviderHelper<T> {
 
+	protected static Logger logger = LoggerFactory.getLogger( ServiceProviderHelper.class );
+
 	/**
 	 * 
 	 */
@@ -30,10 +31,9 @@ public class ServiceProviderHelper<T> {
 	@Inject
 	private DataSource dataSource;
 
-	protected static Logger logger = LoggerFactory.getLogger( ServiceProviderHelper.class );
-	
-	private static final QuickstartLogicFacade FACADE = new QuickstartDataLogicFacade();
-	
+	@Inject
+	private QuickstartLogicFacade facade;
+
 	public Object createResultFromList( SimpleServiceResult<List<T>> result ) {
 		return result.getContent();
 	}
@@ -56,7 +56,7 @@ public class ServiceProviderHelper<T> {
 		try {
 			//
 			CloseableDAOContext context = new CloseableDAOContextSC( this.dataSource.getConnection() ); // NOSONAR
-			context.setAttribute( QuickstartLogicFacadeHelper.ATT_NAME , FACADE );
+			context.setAttribute( QuickstartLogicFacadeHelper.ATT_NAME , this.facade );
 			return context;
 		} catch (Exception e) {
 			throw new DAOException( e );

@@ -13,6 +13,8 @@ class MappedTableJunit5FinderTest {
 		current.setModel( new HelperMappedTable() );
 		current.setId( 1002L );
 		Assertions.assertNotNull( current );
+		Assertions.assertNotNull( MappedTableFinder.newInstance( current.getId() ) );
+		Assertions.assertNotNull( MappedTableFinder.newInstance( current.getModel() ) );
 	}
 
 }

@@ -1,6 +1,5 @@
 package org.fugerit.java.fjdaogenquickstart;
 
-import io.quarkus.runtime.annotations.RegisterForReflection;
 import jakarta.ws.rs.Path;
 
 // custom import start ( code above here will be overwritten )
@@ -16,7 +15,6 @@ import jakarta.ws.rs.Path;
  * // custom code end ( code below here will be overwritten )
  */
 @Path("/person/load")
-@RegisterForReflection( targets =  { LoadPerson.class, LoadPersonHelper.class })
 public class LoadPerson extends LoadPersonHelper {
 
 	// custom code start ( code above here will be overwritten )

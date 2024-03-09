@@ -13,6 +13,7 @@ class Example01Junit5FinderTest {
 		current.setModel( new HelperExample01() );
 		current.setId( 1001L );
 		Assertions.assertNotNull( current );
+		Assertions.assertNotNull( Example01Finder.newInstance( current.getModel() ) );
 	}
 
 }

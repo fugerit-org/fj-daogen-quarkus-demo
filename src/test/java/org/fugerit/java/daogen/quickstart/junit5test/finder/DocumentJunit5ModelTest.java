@@ -13,6 +13,8 @@ class DocumentJunit5FinderTest {
 		current.setModel( new HelperDocument() );
 		current.setId( 1000L );
 		Assertions.assertNotNull( current );
+		Assertions.assertNotNull( DocumentFinder.newInstance( current.getId() ) );
+		Assertions.assertNotNull( DocumentFinder.newInstance( current.getModel() ) );
 	}
 
 }
