@@ -43,6 +43,8 @@ class Example01Junit5ModelTest {
 	 void testJUnit5ModelExample01() { 
 		ModelExample01 current = this.newInstance();
 		this.printAll( current );
+		logger.info( "current toString() : {}", current );
+		logger.info( "current isEmpty() : {}", current.isEmpty() );
 		Assertions.assertNotNull( current );
 	}
 

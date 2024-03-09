@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- fj-daogen-version set to 1.7.4
+- fj-daogen-version set to 1.7.5
 - fj-version set to 8.5.3
 - dao-finder-ng-mode 'enabled'
 

@@ -41,6 +41,8 @@ class MappedTableJunit5ModelTest {
 	 void testJUnit5ModelMappedTable() { 
 		ModelMappedTable current = this.newInstance();
 		this.printAll( current );
+		logger.info( "current toString() : {}", current );
+		logger.info( "current isEmpty() : {}", current.isEmpty() );
 		Assertions.assertNotNull( current );
 	}
 

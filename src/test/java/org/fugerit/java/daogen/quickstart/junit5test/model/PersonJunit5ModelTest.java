@@ -51,6 +51,8 @@ class PersonJunit5ModelTest {
 	 void testJUnit5ModelPerson() { 
 		ModelPerson current = this.newInstance();
 		this.printAll( current );
+		logger.info( "current toString() : {}", current );
+		logger.info( "current isEmpty() : {}", current.isEmpty() );
 		Assertions.assertNotNull( current );
 	}
 
