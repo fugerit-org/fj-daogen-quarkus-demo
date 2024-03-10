@@ -42,15 +42,23 @@ class PersonJunit5ModelTest {
 	public ModelPerson newInstance() { 
 		WrapperPerson current = new WrapperPerson( new HelperPerson() );
 		current.setId(new java.math.BigDecimal( "1" ));
+		Assertions.assertFalse( current.isEmpty() );
 		current.setSurname("1");
+		Assertions.assertFalse( current.isEmpty() );
 		current.setName("1");
+		Assertions.assertFalse( current.isEmpty() );
 		current.setBirthDate(new java.util.Date());
+		Assertions.assertFalse( current.isEmpty() );
 		current.setNote("1");
+		Assertions.assertFalse( current.isEmpty() );
 		current.setIdMother(new java.math.BigDecimal( "1" ));
+		Assertions.assertFalse( current.isEmpty() );
 		current.setIdFather(new java.math.BigDecimal( "1" ));
+		Assertions.assertFalse( current.isEmpty() );
 		current.setMother( new org.fugerit.java.daogen.quickstart.impl.helper.HelperPerson() );
 		current.setFather( new org.fugerit.java.daogen.quickstart.impl.helper.HelperPerson() );
 		current.setOwnedDocuments( new java.util.ArrayList<org.fugerit.java.daogen.quickstart.def.model.ModelDocument>() );
+		logger.info( "unwrap :  {}", current.unwrap( current ) );
 		return current;
 	}
 	@Test

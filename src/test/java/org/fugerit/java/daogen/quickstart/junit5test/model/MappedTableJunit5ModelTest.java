@@ -34,7 +34,10 @@ class MappedTableJunit5ModelTest {
 	public ModelMappedTable newInstance() { 
 		WrapperMappedTable current = new WrapperMappedTable( new HelperMappedTable() );
 		current.setId(new java.math.BigDecimal( "1" ));
+		Assertions.assertFalse( current.isEmpty() );
 		current.setContent("1");
+		Assertions.assertFalse( current.isEmpty() );
+		logger.info( "unwrap :  {}", current.unwrap( current ) );
 		return current;
 	}
 	@Test

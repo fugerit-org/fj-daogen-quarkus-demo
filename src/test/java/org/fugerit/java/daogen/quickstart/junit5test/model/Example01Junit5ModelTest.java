@@ -35,8 +35,12 @@ class Example01Junit5ModelTest {
 	public ModelExample01 newInstance() { 
 		WrapperExample01 current = new WrapperExample01( new HelperExample01() );
 		current.setField1("1");
+		Assertions.assertFalse( current.isEmpty() );
 		current.setField2(new java.util.Date());
+		Assertions.assertFalse( current.isEmpty() );
 		current.setField3("1");
+		Assertions.assertFalse( current.isEmpty() );
+		logger.info( "unwrap :  {}", current.unwrap( current ) );
 		return current;
 	}
 	@Test

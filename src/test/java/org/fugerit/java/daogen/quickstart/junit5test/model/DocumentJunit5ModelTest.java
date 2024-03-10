@@ -40,13 +40,22 @@ class DocumentJunit5ModelTest {
 	public ModelDocument newInstance() { 
 		WrapperDocument current = new WrapperDocument( new HelperDocument() );
 		current.setId(new java.math.BigDecimal( "1" ));
+		Assertions.assertFalse( current.isEmpty() );
 		current.setIdOwner(new java.math.BigDecimal( "1" ));
+		Assertions.assertFalse( current.isEmpty() );
 		current.setIdCreator(new java.math.BigDecimal( "1" ));
+		Assertions.assertFalse( current.isEmpty() );
 		current.setCreationDate(new java.util.Date());
+		Assertions.assertFalse( current.isEmpty() );
 		current.setUpdateDate(new java.util.Date());
+		Assertions.assertFalse( current.isEmpty() );
 		current.setPath("1");
+		Assertions.assertFalse( current.isEmpty() );
 		current.setState(new java.math.BigDecimal( "1" ));
+		Assertions.assertFalse( current.isEmpty() );
 		current.setInfo(null);
+		Assertions.assertFalse( current.isEmpty() );
+		logger.info( "unwrap :  {}", current.unwrap( current ) );
 		return current;
 	}
 	@Test
