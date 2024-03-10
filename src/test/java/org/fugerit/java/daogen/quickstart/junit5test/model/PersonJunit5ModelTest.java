@@ -34,6 +34,9 @@ class PersonJunit5ModelTest {
 		 logger.info( "NOTE-> {}", current.getNote() );
 		 logger.info( "ID_MOTHER-> {}", current.getIdMother() );
 		 logger.info( "ID_FATHER-> {}", current.getIdFather() );
+		 logger.info( "relation : DAOGEN_QUICKSTART.PERSON_DAOGEN_QUICKSTART.PERSON-> {}", current.getMother() );
+		 logger.info( "relation : DAOGEN_QUICKSTART.PERSON_DAOGEN_QUICKSTART.PERSON-> {}", current.getFather() );
+		 logger.info( "relation : DAOGEN_QUICKSTART.DOCUMENT_DAOGEN_QUICKSTART.PERSON-> {}", current.getOwnedDocuments() );
 	}
 
 	public ModelPerson newInstance() { 
@@ -45,6 +48,9 @@ class PersonJunit5ModelTest {
 		current.setNote("1");
 		current.setIdMother(new java.math.BigDecimal( "1" ));
 		current.setIdFather(new java.math.BigDecimal( "1" ));
+		current.setMother( new org.fugerit.java.daogen.quickstart.impl.helper.HelperPerson() );
+		current.setFather( new org.fugerit.java.daogen.quickstart.impl.helper.HelperPerson() );
+		current.setOwnedDocuments( new java.util.ArrayList<org.fugerit.java.daogen.quickstart.def.model.ModelDocument>() );
 		return current;
 	}
 	@Test
