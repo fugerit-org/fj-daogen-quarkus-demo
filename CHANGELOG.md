@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - app startup early fail
-- fj-daogen-version set to 1.7.8
+- fj-daogen-version set to 1.7.9
 - fj-version set to 8.5.3
 - dao-finder-ng-mode 'enabled'
 

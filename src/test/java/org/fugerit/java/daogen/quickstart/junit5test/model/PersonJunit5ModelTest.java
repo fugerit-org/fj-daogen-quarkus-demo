@@ -57,6 +57,8 @@ class PersonJunit5ModelTest {
 		Assertions.assertFalse( current.isEmpty() );
 		current.setIdFather(new java.math.BigDecimal( "1" ));
 		Assertions.assertFalse( current.isEmpty() );
+		current.setVirtualNote("1");
+		Assertions.assertFalse( current.isEmpty() );
 		current.setMother( new org.fugerit.java.daogen.quickstart.impl.helper.HelperPerson() );
 		current.setFather( new org.fugerit.java.daogen.quickstart.impl.helper.HelperPerson() );
 		current.setOwnedDocuments( new java.util.ArrayList<org.fugerit.java.daogen.quickstart.def.model.ModelDocument>() );
