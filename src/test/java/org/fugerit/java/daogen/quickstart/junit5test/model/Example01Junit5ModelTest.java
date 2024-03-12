@@ -26,6 +26,7 @@ class Example01Junit5ModelTest {
 	// custom code end ( code below here will be overwritten )
 
 	private static final Logger logger = LoggerFactory.getLogger( Example01Junit5ModelTest.class );
+
 	public void printAll( ModelExample01 current ) { 
 		 logger.info( "FIELD1-> {}", current.getField1() );
 		 logger.info( "FIELD2-> {}", current.getField2() );
@@ -34,6 +35,7 @@ class Example01Junit5ModelTest {
 
 	public ModelExample01 newInstance() { 
 		WrapperExample01 current = new WrapperExample01( new HelperExample01() );
+		Assertions.assertTrue( current.isEmpty() );
 		current.setField1("1");
 		Assertions.assertFalse( current.isEmpty() );
 		current.setField2(new java.util.Date());
@@ -43,12 +45,12 @@ class Example01Junit5ModelTest {
 		logger.info( "unwrap :  {}", current.unwrap( current ) );
 		return current;
 	}
+
 	@Test
 	 void testJUnit5ModelExample01() { 
 		ModelExample01 current = this.newInstance();
 		this.printAll( current );
 		logger.info( "current toString() : {}", current );
-		logger.info( "current isEmpty() : {}", current.isEmpty() );
 		Assertions.assertNotNull( current );
 	}
 

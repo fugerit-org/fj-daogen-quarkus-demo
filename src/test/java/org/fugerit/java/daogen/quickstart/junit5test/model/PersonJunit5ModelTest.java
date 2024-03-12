@@ -26,6 +26,7 @@ class PersonJunit5ModelTest {
 	// custom code end ( code below here will be overwritten )
 
 	private static final Logger logger = LoggerFactory.getLogger( PersonJunit5ModelTest.class );
+
 	public void printAll( ModelPerson current ) { 
 		 logger.info( "ID-> {}", current.getId() );
 		 logger.info( "SURNAME-> {}", current.getSurname() );
@@ -41,6 +42,7 @@ class PersonJunit5ModelTest {
 
 	public ModelPerson newInstance() { 
 		WrapperPerson current = new WrapperPerson( new HelperPerson() );
+		Assertions.assertTrue( current.isEmpty() );
 		current.setId(new java.math.BigDecimal( "1" ));
 		Assertions.assertFalse( current.isEmpty() );
 		current.setSurname("1");
@@ -61,12 +63,12 @@ class PersonJunit5ModelTest {
 		logger.info( "unwrap :  {}", current.unwrap( current ) );
 		return current;
 	}
+
 	@Test
 	 void testJUnit5ModelPerson() { 
 		ModelPerson current = this.newInstance();
 		this.printAll( current );
 		logger.info( "current toString() : {}", current );
-		logger.info( "current isEmpty() : {}", current.isEmpty() );
 		Assertions.assertNotNull( current );
 	}
 

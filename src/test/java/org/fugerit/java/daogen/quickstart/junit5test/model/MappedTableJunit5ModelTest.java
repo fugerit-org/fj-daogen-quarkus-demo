@@ -26,6 +26,7 @@ class MappedTableJunit5ModelTest {
 	// custom code end ( code below here will be overwritten )
 
 	private static final Logger logger = LoggerFactory.getLogger( MappedTableJunit5ModelTest.class );
+
 	public void printAll( ModelMappedTable current ) { 
 		 logger.info( "ID-> {}", current.getId() );
 		 logger.info( "CONTENT-> {}", current.getContent() );
@@ -33,6 +34,7 @@ class MappedTableJunit5ModelTest {
 
 	public ModelMappedTable newInstance() { 
 		WrapperMappedTable current = new WrapperMappedTable( new HelperMappedTable() );
+		Assertions.assertTrue( current.isEmpty() );
 		current.setId(new java.math.BigDecimal( "1" ));
 		Assertions.assertFalse( current.isEmpty() );
 		current.setContent("1");
@@ -40,12 +42,12 @@ class MappedTableJunit5ModelTest {
 		logger.info( "unwrap :  {}", current.unwrap( current ) );
 		return current;
 	}
+
 	@Test
 	 void testJUnit5ModelMappedTable() { 
 		ModelMappedTable current = this.newInstance();
 		this.printAll( current );
 		logger.info( "current toString() : {}", current );
-		logger.info( "current isEmpty() : {}", current.isEmpty() );
 		Assertions.assertNotNull( current );
 	}
 

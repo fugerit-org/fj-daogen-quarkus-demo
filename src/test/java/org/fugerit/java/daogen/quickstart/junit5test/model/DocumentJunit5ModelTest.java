@@ -26,6 +26,7 @@ class DocumentJunit5ModelTest {
 	// custom code end ( code below here will be overwritten )
 
 	private static final Logger logger = LoggerFactory.getLogger( DocumentJunit5ModelTest.class );
+
 	public void printAll( ModelDocument current ) { 
 		 logger.info( "ID-> {}", current.getId() );
 		 logger.info( "ID_OWNER-> {}", current.getIdOwner() );
@@ -39,6 +40,7 @@ class DocumentJunit5ModelTest {
 
 	public ModelDocument newInstance() { 
 		WrapperDocument current = new WrapperDocument( new HelperDocument() );
+		Assertions.assertTrue( current.isEmpty() );
 		current.setId(new java.math.BigDecimal( "1" ));
 		Assertions.assertFalse( current.isEmpty() );
 		current.setIdOwner(new java.math.BigDecimal( "1" ));
@@ -58,12 +60,12 @@ class DocumentJunit5ModelTest {
 		logger.info( "unwrap :  {}", current.unwrap( current ) );
 		return current;
 	}
+
 	@Test
 	 void testJUnit5ModelDocument() { 
 		ModelDocument current = this.newInstance();
 		this.printAll( current );
 		logger.info( "current toString() : {}", current );
-		logger.info( "current isEmpty() : {}", current.isEmpty() );
 		Assertions.assertNotNull( current );
 	}
 
