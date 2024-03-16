@@ -1,5 +1,6 @@
 package org.fugerit.java.daogen.quickstart.junit5test.model;
 
+import org.fugerit.java.daogen.quickstart.def.facade.PersonFinder;
 import org.fugerit.java.daogen.quickstart.def.model.ModelPerson;
 import org.fugerit.java.daogen.quickstart.impl.helper.HelperPerson;
 import org.fugerit.java.daogen.quickstart.impl.helper.WrapperPerson;
@@ -28,16 +29,16 @@ class PersonJunit5ModelTest {
 	private static final Logger logger = LoggerFactory.getLogger( PersonJunit5ModelTest.class );
 
 	public void printAll( ModelPerson current ) { 
-		 logger.info( "ID-> {}", current.getId() );
-		 logger.info( "SURNAME-> {}", current.getSurname() );
-		 logger.info( "NAME-> {}", current.getName() );
-		 logger.info( "BIRTH_DATE-> {}", current.getBirthDate() );
-		 logger.info( "NOTE-> {}", current.getNote() );
-		 logger.info( "ID_MOTHER-> {}", current.getIdMother() );
-		 logger.info( "ID_FATHER-> {}", current.getIdFather() );
-		 logger.info( "relation : DAOGEN_QUICKSTART.PERSON_DAOGEN_QUICKSTART.PERSON-> {}", current.getMother() );
-		 logger.info( "relation : DAOGEN_QUICKSTART.PERSON_DAOGEN_QUICKSTART.PERSON-> {}", current.getFather() );
-		 logger.info( "relation : DAOGEN_QUICKSTART.DOCUMENT_DAOGEN_QUICKSTART.PERSON-> {}", current.getOwnedDocuments() );
+		logger.info( "ID-> {}", current.getId() );
+		logger.info( "SURNAME-> {}", current.getSurname() );
+		logger.info( "NAME-> {}", current.getName() );
+		logger.info( "BIRTH_DATE-> {}", current.getBirthDate() );
+		logger.info( "NOTE-> {}", current.getNote() );
+		logger.info( "ID_MOTHER-> {}", current.getIdMother() );
+		logger.info( "ID_FATHER-> {}", current.getIdFather() );
+		logger.info( "relation : DAOGEN_QUICKSTART.PERSON_DAOGEN_QUICKSTART.PERSON-> {}", current.getMother() );
+		logger.info( "relation : DAOGEN_QUICKSTART.PERSON_DAOGEN_QUICKSTART.PERSON-> {}", current.getFather() );
+		logger.info( "relation : DAOGEN_QUICKSTART.DOCUMENT_DAOGEN_QUICKSTART.PERSON-> {}", current.getOwnedDocuments() );
 	}
 
 	public ModelPerson newInstance() { 
@@ -72,6 +73,13 @@ class PersonJunit5ModelTest {
 		this.printAll( current );
 		logger.info( "current toString() : {}", current );
 		Assertions.assertNotNull( current );
+		PersonFinder finder1 = new PersonFinder();
+		finder1.setModel( current );
+		logger.info( "finder1.getModel() -> {}", finder1.getModel() );
+		finder1.setId( current.getId() );
+		Assertions.assertEquals( current.getId(), finder1.getId() );
+		Assertions.assertNotNull( PersonFinder.newInstance( current.getId() ) );
+		Assertions.assertNotNull( finder1 );
 	}
 
 }

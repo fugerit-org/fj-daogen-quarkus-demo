@@ -1,5 +1,6 @@
 package org.fugerit.java.daogen.quickstart.junit5test.model;
 
+import org.fugerit.java.daogen.quickstart.def.facade.DocumentFinder;
 import org.fugerit.java.daogen.quickstart.def.model.ModelDocument;
 import org.fugerit.java.daogen.quickstart.impl.helper.HelperDocument;
 import org.fugerit.java.daogen.quickstart.impl.helper.WrapperDocument;
@@ -28,14 +29,14 @@ class DocumentJunit5ModelTest {
 	private static final Logger logger = LoggerFactory.getLogger( DocumentJunit5ModelTest.class );
 
 	public void printAll( ModelDocument current ) { 
-		 logger.info( "ID-> {}", current.getId() );
-		 logger.info( "ID_OWNER-> {}", current.getIdOwner() );
-		 logger.info( "ID_CREATOR-> {}", current.getIdCreator() );
-		 logger.info( "CREATION_DATE-> {}", current.getCreationDate() );
-		 logger.info( "UPDATE_DATE-> {}", current.getUpdateDate() );
-		 logger.info( "PATH-> {}", current.getPath() );
-		 logger.info( "STATE-> {}", current.getState() );
-		 logger.info( "INFO-> {}", current.getInfo() );
+		logger.info( "ID-> {}", current.getId() );
+		logger.info( "ID_OWNER-> {}", current.getIdOwner() );
+		logger.info( "ID_CREATOR-> {}", current.getIdCreator() );
+		logger.info( "CREATION_DATE-> {}", current.getCreationDate() );
+		logger.info( "UPDATE_DATE-> {}", current.getUpdateDate() );
+		logger.info( "PATH-> {}", current.getPath() );
+		logger.info( "STATE-> {}", current.getState() );
+		logger.info( "INFO-> {}", current.getInfo() );
 	}
 
 	public ModelDocument newInstance() { 
@@ -67,6 +68,13 @@ class DocumentJunit5ModelTest {
 		this.printAll( current );
 		logger.info( "current toString() : {}", current );
 		Assertions.assertNotNull( current );
+		DocumentFinder finder1 = new DocumentFinder();
+		finder1.setModel( current );
+		logger.info( "finder1.getModel() -> {}", finder1.getModel() );
+		finder1.setId( current.getId() );
+		Assertions.assertEquals( current.getId(), finder1.getId() );
+		Assertions.assertNotNull( DocumentFinder.newInstance( current.getId() ) );
+		Assertions.assertNotNull( finder1 );
 	}
 
 }

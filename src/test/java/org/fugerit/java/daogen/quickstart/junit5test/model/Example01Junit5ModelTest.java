@@ -1,5 +1,6 @@
 package org.fugerit.java.daogen.quickstart.junit5test.model;
 
+import org.fugerit.java.daogen.quickstart.def.facade.Example01Finder;
 import org.fugerit.java.daogen.quickstart.def.model.ModelExample01;
 import org.fugerit.java.daogen.quickstart.impl.helper.HelperExample01;
 import org.fugerit.java.daogen.quickstart.impl.helper.WrapperExample01;
@@ -28,9 +29,9 @@ class Example01Junit5ModelTest {
 	private static final Logger logger = LoggerFactory.getLogger( Example01Junit5ModelTest.class );
 
 	public void printAll( ModelExample01 current ) { 
-		 logger.info( "FIELD1-> {}", current.getField1() );
-		 logger.info( "FIELD2-> {}", current.getField2() );
-		 logger.info( "FIELD3-> {}", current.getField3() );
+		logger.info( "FIELD1-> {}", current.getField1() );
+		logger.info( "FIELD2-> {}", current.getField2() );
+		logger.info( "FIELD3-> {}", current.getField3() );
 	}
 
 	public ModelExample01 newInstance() { 
@@ -52,6 +53,10 @@ class Example01Junit5ModelTest {
 		this.printAll( current );
 		logger.info( "current toString() : {}", current );
 		Assertions.assertNotNull( current );
+		Example01Finder finder1 = new Example01Finder();
+		finder1.setModel( current );
+		logger.info( "finder1.getModel() -> {}", finder1.getModel() );
+		Assertions.assertNotNull( finder1 );
 	}
 
 }
