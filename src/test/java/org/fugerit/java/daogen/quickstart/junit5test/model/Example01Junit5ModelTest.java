@@ -56,6 +56,7 @@ class Example01Junit5ModelTest {
 		Example01Finder finder1 = new Example01Finder();
 		finder1.setModel( current );
 		logger.info( "finder1.getModel() -> {}", finder1.getModel() );
+		Assertions.assertNotNull( Example01Finder.newInstance( current ) );
 		Assertions.assertNotNull( finder1 );
 	}
 

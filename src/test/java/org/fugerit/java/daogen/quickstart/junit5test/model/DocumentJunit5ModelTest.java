@@ -74,6 +74,7 @@ class DocumentJunit5ModelTest {
 		finder1.setId( current.getId() );
 		Assertions.assertEquals( current.getId(), finder1.getId() );
 		Assertions.assertNotNull( DocumentFinder.newInstance( current.getId() ) );
+		Assertions.assertNotNull( DocumentFinder.newInstance( current ) );
 		Assertions.assertNotNull( finder1 );
 	}
 

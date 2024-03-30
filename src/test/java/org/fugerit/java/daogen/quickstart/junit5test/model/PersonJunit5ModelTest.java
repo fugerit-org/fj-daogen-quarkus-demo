@@ -79,6 +79,7 @@ class PersonJunit5ModelTest {
 		finder1.setId( current.getId() );
 		Assertions.assertEquals( current.getId(), finder1.getId() );
 		Assertions.assertNotNull( PersonFinder.newInstance( current.getId() ) );
+		Assertions.assertNotNull( PersonFinder.newInstance( current ) );
 		Assertions.assertNotNull( finder1 );
 	}
 

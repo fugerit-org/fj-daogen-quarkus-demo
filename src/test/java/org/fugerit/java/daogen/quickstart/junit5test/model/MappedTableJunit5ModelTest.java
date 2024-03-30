@@ -56,6 +56,7 @@ class MappedTableJunit5ModelTest {
 		finder1.setId( current.getId() );
 		Assertions.assertEquals( current.getId(), finder1.getId() );
 		Assertions.assertNotNull( MappedTableFinder.newInstance( current.getId() ) );
+		Assertions.assertNotNull( MappedTableFinder.newInstance( current ) );
 		Assertions.assertNotNull( finder1 );
 	}
 
