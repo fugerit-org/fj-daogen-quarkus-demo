@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- fj-daogen-version 1.8.1
 - lombok-version set to 1.18.32
 
 ## [1.4.0] - 2024-03-16
