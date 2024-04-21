@@ -7,8 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.4.2] - 2024-04-21
+
 ### Changed
 
+- instruction for uber jar
 - quarkus-version 3.9.4
 
 ## [1.4.1] - 2024-03-30

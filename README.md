@@ -27,9 +27,33 @@ Open [dev ui](http://localhost:8080/q/dev-ui/) or sample [API Page](http://local
 
 ## Java package version
 
+build : 
+
 ```shell script
-mvn pacakge
+mvn package
 ```
+
+and run : 
+
+```shell script
+java -jar target/quarkus-app/quarkus-run.jar
+```
+
+## Java package uber jar version
+
+build :
+
+```shell script
+mvn package -Dquarkus.package.type=uber-jar
+```
+
+and tun : 
+
+```shell script
+java -jar target/fj-daogen-quarkus-demo-*-runner.jar
+```
+
+
 
 ## Docker container (jvm version)
 
