@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.4.3] - 2024-04-22
+
+### Changed
+
+- docker publish with action [Maven container publish](https://github.com/fugerit-org/psychic-actions/blob/main/maven-container-publish/maven-container-publish.md)
+
 ## [1.4.2] - 2024-04-21
 
 ### Changed
