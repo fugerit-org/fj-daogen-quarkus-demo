@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - quarkus-version 3.10.0
+- fj-daogen-version 1.8.2
+- fj-version 8.5.9
 
 ## [1.4.3] - 2024-04-22
 

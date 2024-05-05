@@ -39,6 +39,7 @@ reference : https://marsdocs.fugerit.org/src/docs/config/config.html
 	dao-helper-ng-mode="enabled"
 	dao-wrapper-ng-mode="enabled"
 	dao-finder-ng-mode="enabled"
+	type-mapper-time-ng="enabled"
 	default-sequence="quickstart_id"
 	openapi_host="http://localhost:8080"
 	openapi_path=""
