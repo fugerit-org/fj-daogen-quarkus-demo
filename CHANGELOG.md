@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - quarkus-version 3.10.0
 - fj-daogen-version 1.8.2
 - fj-version 8.5.9
+- type-mapper-time-ng set to enabled (requires fj-daogen 1.8.2+)
 
 ## [1.4.3] - 2024-04-22
 

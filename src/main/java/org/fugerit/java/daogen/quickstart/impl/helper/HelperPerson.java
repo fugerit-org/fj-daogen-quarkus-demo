@@ -59,15 +59,15 @@ public class HelperPerson implements ModelPerson {
 		return this.name;
 	}
 
-	private java.util.Date birthDate;
+	private java.time.LocalDate birthDate;
 
 	@Override
-	public void setBirthDate( java.util.Date value ) {
+	public void setBirthDate( java.time.LocalDate value ) {
 		this.birthDate = value;
 	}
 
 	@Override
-	public java.util.Date getBirthDate() {
+	public java.time.LocalDate getBirthDate() {
 		return this.birthDate;
 	}
 

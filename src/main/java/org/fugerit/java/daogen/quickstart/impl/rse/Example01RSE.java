@@ -31,7 +31,7 @@ public class Example01RSE extends BasicRSExtractor<ModelExample01> {
 	public ModelExample01 extractNext( ResultSet rs ) throws SQLException { 
 		HelperExample01 current = new HelperExample01();
 		current.setField1( rs.getString( "FIELD1" )  );
-		current.setField2( rs.getTimestamp( "FIELD2" )  );
+		current.setField2( org.fugerit.java.core.db.daogen.SQLTypeConverter.utilDateToLocalDate( rs.getDate( "FIELD2" ) )  );
 		current.setField3( rs.getString( "FIELD3" )  );
 		return current;
 	} 

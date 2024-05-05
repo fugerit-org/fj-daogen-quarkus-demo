@@ -81,7 +81,7 @@ public interface ModelDocument extends org.fugerit.java.core.lang.compare.CheckE
 	 *
 	 * @return the value of creationDate
 	 */
-	java.util.Date getCreationDate();
+	java.time.LocalDateTime getCreationDate();
 
 	/**
 	 * Setter method for property : creationDate (nullable: no)
@@ -90,7 +90,7 @@ public interface ModelDocument extends org.fugerit.java.core.lang.compare.CheckE
 	 *
 	 * @param value the value of creationDate
 	 */
-	void setCreationDate( java.util.Date value );
+	void setCreationDate( java.time.LocalDateTime value );
 
 	/**
 	 * Getter method for property : updateDate (nullable: no)
@@ -99,7 +99,7 @@ public interface ModelDocument extends org.fugerit.java.core.lang.compare.CheckE
 	 *
 	 * @return the value of updateDate
 	 */
-	java.util.Date getUpdateDate();
+	java.time.LocalDateTime getUpdateDate();
 
 	/**
 	 * Setter method for property : updateDate (nullable: no)
@@ -108,7 +108,7 @@ public interface ModelDocument extends org.fugerit.java.core.lang.compare.CheckE
 	 *
 	 * @param value the value of updateDate
 	 */
-	void setUpdateDate( java.util.Date value );
+	void setUpdateDate( java.time.LocalDateTime value );
 
 	/**
 	 * Getter method for property : path (nullable: no)

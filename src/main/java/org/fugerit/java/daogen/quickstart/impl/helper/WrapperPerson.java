@@ -67,12 +67,12 @@ public class WrapperPerson extends BasicWrapperNG<ModelPerson> implements ModelP
 	}
 
 	@Override
-	public void setBirthDate( java.util.Date value ) {
+	public void setBirthDate( java.time.LocalDate value ) {
 		this.unwrapModel().setBirthDate( value );
 	}
 
 	@Override
-	public java.util.Date getBirthDate() {
+	public java.time.LocalDate getBirthDate() {
 		return this.unwrapModel().getBirthDate();
 	}
 

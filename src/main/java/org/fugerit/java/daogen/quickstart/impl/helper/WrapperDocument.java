@@ -66,22 +66,22 @@ public class WrapperDocument extends BasicWrapperNG<ModelDocument> implements Mo
 	}
 
 	@Override
-	public void setCreationDate( java.util.Date value ) {
+	public void setCreationDate( java.time.LocalDateTime value ) {
 		this.unwrapModel().setCreationDate( value );
 	}
 
 	@Override
-	public java.util.Date getCreationDate() {
+	public java.time.LocalDateTime getCreationDate() {
 		return this.unwrapModel().getCreationDate();
 	}
 
 	@Override
-	public void setUpdateDate( java.util.Date value ) {
+	public void setUpdateDate( java.time.LocalDateTime value ) {
 		this.unwrapModel().setUpdateDate( value );
 	}
 
 	@Override
-	public java.util.Date getUpdateDate() {
+	public java.time.LocalDateTime getUpdateDate() {
 		return this.unwrapModel().getUpdateDate();
 	}
 

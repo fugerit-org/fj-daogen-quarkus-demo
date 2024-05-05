@@ -81,7 +81,7 @@ public interface ModelPerson extends org.fugerit.java.core.lang.compare.CheckEmp
 	 *
 	 * @return the value of birthDate
 	 */
-	java.util.Date getBirthDate();
+	java.time.LocalDate getBirthDate();
 
 	/**
 	 * Setter method for property : birthDate (nullable: no)
@@ -90,7 +90,7 @@ public interface ModelPerson extends org.fugerit.java.core.lang.compare.CheckEmp
 	 *
 	 * @param value the value of birthDate
 	 */
-	void setBirthDate( java.util.Date value );
+	void setBirthDate( java.time.LocalDate value );
 
 	/**
 	 * Getter method for property : note (nullable: no)

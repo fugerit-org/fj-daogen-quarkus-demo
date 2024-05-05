@@ -39,7 +39,7 @@ class Example01Junit5ModelTest {
 		Assertions.assertTrue( current.isEmpty() );
 		current.setField1("1");
 		Assertions.assertFalse( current.isEmpty() );
-		current.setField2(new java.util.Date());
+		current.setField2(null);
 		Assertions.assertFalse( current.isEmpty() );
 		current.setField3("1");
 		Assertions.assertFalse( current.isEmpty() );

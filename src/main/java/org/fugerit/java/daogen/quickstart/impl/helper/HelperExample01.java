@@ -34,15 +34,15 @@ public class HelperExample01 implements ModelExample01 {
 		return this.field1;
 	}
 
-	private java.util.Date field2;
+	private java.time.LocalDate field2;
 
 	@Override
-	public void setField2( java.util.Date value ) {
+	public void setField2( java.time.LocalDate value ) {
 		this.field2 = value;
 	}
 
 	@Override
-	public java.util.Date getField2() {
+	public java.time.LocalDate getField2() {
 		return this.field2;
 	}
 

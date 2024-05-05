@@ -1,5 +1,6 @@
 [ {
   "name" : "org.fugerit.java.daogen.quickstart.def.model.ModelDocument",
+  "fields" : [ ],
   "methods" : [ {
     "name" : "<init>",
     "parameterTypes" : [ ]
@@ -33,6 +34,7 @@
   } ]
 }, {
   "name" : "org.fugerit.java.daogen.quickstart.impl.helper.HelperDocument",
+  "fields" : [ ],
   "methods" : [ {
     "name" : "<init>",
     "parameterTypes" : [ ]
@@ -66,6 +68,7 @@
   } ]
 }, {
   "name" : "org.fugerit.java.daogen.quickstart.impl.helper.WrapperDocument",
+  "fields" : [ ],
   "methods" : [ {
     "name" : "<init>",
     "parameterTypes" : [ ]
@@ -99,6 +102,7 @@
   } ]
 }, {
   "name" : "org.fugerit.java.daogen.quickstart.def.model.ModelExample01",
+  "fields" : [ ],
   "methods" : [ {
     "name" : "<init>",
     "parameterTypes" : [ ]
@@ -117,6 +121,7 @@
   } ]
 }, {
   "name" : "org.fugerit.java.daogen.quickstart.impl.helper.HelperExample01",
+  "fields" : [ ],
   "methods" : [ {
     "name" : "<init>",
     "parameterTypes" : [ ]
@@ -135,6 +140,7 @@
   } ]
 }, {
   "name" : "org.fugerit.java.daogen.quickstart.impl.helper.WrapperExample01",
+  "fields" : [ ],
   "methods" : [ {
     "name" : "<init>",
     "parameterTypes" : [ ]
@@ -153,6 +159,7 @@
   } ]
 }, {
   "name" : "org.fugerit.java.daogen.quickstart.def.model.ModelMappedTable",
+  "fields" : [ ],
   "methods" : [ {
     "name" : "<init>",
     "parameterTypes" : [ ]
@@ -168,6 +175,7 @@
   } ]
 }, {
   "name" : "org.fugerit.java.daogen.quickstart.impl.helper.HelperMappedTable",
+  "fields" : [ ],
   "methods" : [ {
     "name" : "<init>",
     "parameterTypes" : [ ]
@@ -183,6 +191,7 @@
   } ]
 }, {
   "name" : "org.fugerit.java.daogen.quickstart.impl.helper.WrapperMappedTable",
+  "fields" : [ ],
   "methods" : [ {
     "name" : "<init>",
     "parameterTypes" : [ ]
@@ -198,6 +207,7 @@
   } ]
 }, {
   "name" : "org.fugerit.java.daogen.quickstart.def.model.ModelPerson",
+  "fields" : [ ],
   "methods" : [ {
     "name" : "<init>",
     "parameterTypes" : [ ]
@@ -240,6 +250,7 @@
   } ]
 }, {
   "name" : "org.fugerit.java.daogen.quickstart.impl.helper.HelperPerson",
+  "fields" : [ ],
   "methods" : [ {
     "name" : "<init>",
     "parameterTypes" : [ ]
@@ -282,6 +293,7 @@
   } ]
 }, {
   "name" : "org.fugerit.java.daogen.quickstart.impl.helper.WrapperPerson",
+  "fields" : [ ],
   "methods" : [ {
     "name" : "<init>",
     "parameterTypes" : [ ]

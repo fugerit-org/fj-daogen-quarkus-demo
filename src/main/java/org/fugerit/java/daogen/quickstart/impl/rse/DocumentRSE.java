@@ -33,8 +33,8 @@ public class DocumentRSE extends BasicRSExtractor<ModelDocument> {
 		current.setId( rs.getBigDecimal( "ID" )  );
 		current.setIdOwner( rs.getBigDecimal( "ID_OWNER" )  );
 		current.setIdCreator( rs.getBigDecimal( "ID_CREATOR" )  );
-		current.setCreationDate( rs.getTimestamp( "CREATION_DATE" )  );
-		current.setUpdateDate( rs.getTimestamp( "UPDATE_DATE" )  );
+		current.setCreationDate( org.fugerit.java.core.db.daogen.SQLTypeConverter.utilDateToLocalDateTime( rs.getTimestamp( "CREATION_DATE" ) )  );
+		current.setUpdateDate( org.fugerit.java.core.db.daogen.SQLTypeConverter.utilDateToLocalDateTime( rs.getTimestamp( "UPDATE_DATE" ) )  );
 		current.setPath( rs.getString( "PATH" )  );
 		current.setState( rs.getBigDecimal( "STATE" )  );
 		try { 

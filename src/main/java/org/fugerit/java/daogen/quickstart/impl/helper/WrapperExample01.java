@@ -46,12 +46,12 @@ public class WrapperExample01 extends BasicWrapperNG<ModelExample01> implements 
 	}
 
 	@Override
-	public void setField2( java.util.Date value ) {
+	public void setField2( java.time.LocalDate value ) {
 		this.unwrapModel().setField2( value );
 	}
 
 	@Override
-	public java.util.Date getField2() {
+	public java.time.LocalDate getField2() {
 		return this.unwrapModel().getField2();
 	}
 

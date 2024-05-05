@@ -33,7 +33,7 @@ public class PersonRSE extends BasicRSExtractor<ModelPerson> {
 		current.setId( rs.getBigDecimal( "ID" )  );
 		current.setSurname( rs.getString( "SURNAME" )  );
 		current.setName( rs.getString( "NAME" )  );
-		current.setBirthDate( rs.getTimestamp( "BIRTH_DATE" )  );
+		current.setBirthDate( org.fugerit.java.core.db.daogen.SQLTypeConverter.utilDateToLocalDate( rs.getDate( "BIRTH_DATE" ) )  );
 		current.setNote( rs.getString( "NOTE" )  );
 		current.setIdMother( rs.getBigDecimal( "ID_MOTHER" )  );
 		current.setIdFather( rs.getBigDecimal( "ID_FATHER" )  );

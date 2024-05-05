@@ -50,7 +50,7 @@ class PersonJunit5ModelTest {
 		Assertions.assertFalse( current.isEmpty() );
 		current.setName("1");
 		Assertions.assertFalse( current.isEmpty() );
-		current.setBirthDate(new java.util.Date());
+		current.setBirthDate(null);
 		Assertions.assertFalse( current.isEmpty() );
 		current.setNote("1");
 		Assertions.assertFalse( current.isEmpty() );

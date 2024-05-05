@@ -45,7 +45,7 @@ public interface ModelExample01 extends org.fugerit.java.core.lang.compare.Check
 	 *
 	 * @return the value of field2
 	 */
-	java.util.Date getField2();
+	java.time.LocalDate getField2();
 
 	/**
 	 * Setter method for property : field2 (nullable: no)
@@ -54,7 +54,7 @@ public interface ModelExample01 extends org.fugerit.java.core.lang.compare.Check
 	 *
 	 * @param value the value of field2
 	 */
-	void setField2( java.util.Date value );
+	void setField2( java.time.LocalDate value );
 
 	/**
 	 * Getter method for property : field3 (nullable: yes)
