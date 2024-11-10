@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - quarkus-version 3.11.0
 - fj-version 8.6.2
+- fj-daogen-version 1.8.3
 
 ## [1.5.0] - 2024-05-05
 

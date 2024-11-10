@@ -25,8 +25,6 @@ public class PersonRSE extends BasicRSExtractor<ModelPerson> {
 
 	private static final long serialVersionUID = 102069616197L;
 
-	public static final PersonRSE DEFAULT = new PersonRSE();
-
 	@Override
 	public ModelPerson extractNext( ResultSet rs ) throws SQLException { 
 		HelperPerson current = new HelperPerson();

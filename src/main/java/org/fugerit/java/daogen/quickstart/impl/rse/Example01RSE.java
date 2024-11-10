@@ -25,8 +25,6 @@ public class Example01RSE extends BasicRSExtractor<ModelExample01> {
 
 	private static final long serialVersionUID = 387383893717L;
 
-	public static final Example01RSE DEFAULT = new Example01RSE();
-
 	@Override
 	public ModelExample01 extractNext( ResultSet rs ) throws SQLException { 
 		HelperExample01 current = new HelperExample01();

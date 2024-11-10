@@ -25,8 +25,6 @@ public class MappedTableRSE extends BasicRSExtractor<ModelMappedTable> {
 
 	private static final long serialVersionUID = 324511825120L;
 
-	public static final MappedTableRSE DEFAULT = new MappedTableRSE();
-
 	@Override
 	public ModelMappedTable extractNext( ResultSet rs ) throws SQLException { 
 		HelperMappedTable current = new HelperMappedTable();

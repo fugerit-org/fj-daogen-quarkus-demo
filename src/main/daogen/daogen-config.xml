@@ -43,7 +43,8 @@ reference : https://marsdocs.fugerit.org/src/docs/config/config.html
 	default-sequence="quickstart_id"
 	openapi_host="http://localhost:8080"
 	openapi_path=""
-	check-empty-interface="1" 
+	check-empty-interface="1"
+	disable-singleton="enabled"
 	jdk-target-version="17"
 	jee-target-mode="jakarta">
 	

@@ -25,8 +25,6 @@ public class DocumentRSE extends BasicRSExtractor<ModelDocument> {
 
 	private static final long serialVersionUID = 872607081519L;
 
-	public static final DocumentRSE DEFAULT = new DocumentRSE();
-
 	@Override
 	public ModelDocument extractNext( ResultSet rs ) throws SQLException { 
 		HelperDocument current = new HelperDocument();
