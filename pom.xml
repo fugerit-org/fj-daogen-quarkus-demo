@@ -20,7 +20,7 @@
     <build-helper-maven-plugin-version>3.4.0</build-helper-maven-plugin-version>
     <gen.base.dir>${project.basedir}</gen.base.dir>
     <generated.source.daogen>target/generated-sources/daogen</generated.source.daogen>
-    <lombok-version>1.18.34</lombok-version>
+    <lombok-version>1.18.36</lombok-version>
   </properties>
   <dependencyManagement>
     <dependencies>
