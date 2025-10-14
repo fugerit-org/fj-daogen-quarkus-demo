@@ -41,7 +41,7 @@
     <dependency>
       <groupId>io.quarkiverse.groovy</groupId>
       <artifactId>quarkus-groovy-junit5</artifactId>
-      <version>3.26.3</version>
+      <version>3.28.0</version>
     </dependency>
     <dependency>
       <groupId>io.quarkus</groupId>
